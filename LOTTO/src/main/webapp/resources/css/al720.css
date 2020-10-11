@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+@charset "euc-kr";
+
+
+/************************************************************** JJANG s (2020328) **************************************************************/
+
+/* 연금복권720 당첨번호 */
+.win720_num {overflow:hidden;}
+.win720_num .num {position:relative;/*float:left;margin-left:4px;*/display:inline-block;margin-left:2px;padding:1px;width:30px;height:30px;vertical-align:middle;text-align:center;background:#fff;border:3px solid #c7c7c7;border-radius:50%;box-sizing:border-box;}
+.win720_num .num span {display:inline-block;width:100%;height:100%;line-height:19px;color:#333;font-size:16px;font-weight:bold;vertical-align:middle;background:#fff;border:1px solid #c7c7c7;border-radius:50%;box-sizing:border-box;}
+.win720_num .group {display:inline-block;text-align:center;}
+.win720_num .group .num {margin-left:0;border-width:1px;}
+.win720_num .group .num span {line-height:23px;}
+.win720_num .group em {display:inline-block;padding:0 3px;height:30px;line-height:30px;font-style:normal;vertical-align:middle;}
+.win720_num .group.bonus {height:62px;}
+.win720_num .group.bonus .num {width:initial;height:100%;margin-left:0;padding:0;background:transparent;border:none;}
+.win720_num .group.bonus .num span,
+.win720_num .group.bonus .num + em {height:100%;line-height:62px;font-size:26px;font-weight:500;background:transparent;border:0;}
+
+/* 연금복권720 color */
+.al720_color1, .al720_color1 span {border-color:#ff4c4c !important;}/*십만*/
+.al720_color2, .al720_color2 span {border-color:#ff8e4f !important;}/*만*/
+.al720_color3, .al720_color3 span {border-color:#fcd153 !important;}/*천*/
+.al720_color4, .al720_color4 span {border-color:#3cbcff !important;}/*백*/
+.al720_color5, .al720_color5 span {border-color:#8d70da !important;}/*십*/
+.al720_color6, .al720_color6 span {border-color:#777777 !important;}/*일*/
+/************************************************************** //JJANG e (2020328) **************************************************************/
+
+
+.win720_num .num.large {width:62px;height:62px;padding:2px;border-width:6px;vertical-align:top;}
+.win720_num .num.large span {line-height:40px;font-size:28px;border-width:2px;}
+.win720_num .group .num.large {border-width:3px;}
+.win720_num .group .num.large span {line-height:45px;}
+.win720_num .group .num.large + em {display:inline-block;height:62px;line-height:60px;font-size:26px;font-style:normal;}
+
+.win_num_wrap {display:table;width:100%;}
+.win_num_wrap .win_money {display:table-cell;vertical-align:middle;}
+.win_num_wrap .win_money dt {float:left;width:70px;color:#333;font-size:24px;font-weight:600;text-align:left;}
+.win_num_wrap .win_money dd {float:left;color:#333;font-size:24px;font-weight:500;}
+.win_num_wrap .win_money dd .num {color:#007bc3;}
+.win_num_wrap .win720_num {display:table-cell;text-align:right;vertical-align:middle;}
+.win_num_wrap .win720_num .group .num {margin-left:0;}
+.win_num_wrap .win720_num .num {margin-left:8px;}
+.win_result.al720 {padding:60px 30px 35px 30px;}
+.win_result.al720 .win_num_wrap {margin-top:10px;padding:25px 15px;}
+.win_result.al720 .win_num_wrap + .win_num_wrap {margin-top:0;border-top:1px solid #ddd;}
+.win_result.al720 .win_num_wrap .win720_num .group {width:100px;}
+
+.tbl_data .bl0 {border-left:0;}
+.tbl_data thead th.bb0 {border-bottom:0;}
+.tbl_data thead th.group_unit {padding:0 10px;}
+.tbl_data thead th.group_unit ul li {float:left;margin-left:-1px;width:12.8%;color:#333;font-size:12px;background:#e5e5e5;border:1px solid #d6d6d6;}
+.tbl_data thead th.group_unit ul li:first-child {width:23.2%;}
+
+/* 당첨복권 실물보기 */
+.win720_real {width:660px;height:212px;margin:0 auto;}
+.win720_real .lotto720_lottery_wrapper {no-repeat 0 0;}
+.win720_real .real_info {padding:25px 10px 10px;color:#333;font-size:12px;overflow:hidden;}
+.win720_real .real_info dt {float:left;position:relative;padding-left:6px;font-weight:bold;line-height:16px;}
+.win720_real .real_info dt:before {position:absolute;left:0;top:50%;width:2px;height:2px;background:#333;content:"";}
+.win720_real .real_info dd {float:left;padding-left:3px;line-height:16px;color:#333;letter-spacing:0;}
+.win720_real .real_info dd + dt {margin-left:40px;}
+.win720_real .num_list {width:660px;height:212px;}
+.win720_real .num_list .num {display:inline-block;width:68px;height:68px;}
+.win720_real .lotto720_lottery_wrapper .lotto720_lottery .lotto720_number_wrapper .lotto720_box {background:rgba(237,249,255,0.8);border-color:rgba(255,255,255,0.8);}
+.win720_real .lotto720_lottery_wrapper .lotto720_lottery .lotto720_number_wrapper .lotto720_box.on {border-color:rgba(205,37,146,0.8);}
+
+
+/* main */
+.main_section.ver2 .wrap_box.wrap1 .win header {border-bottom:1px solid rgba(255,255,255,0.3)}
+.main_section.ver2 .wrap_box.wrap1 .content {margin-top:18px;}
+.main_section.ver2 .wrap_box.wrap1 .content h3 {text-align:center;}
+.main_section.ver2 .wrap_box.wrap1 .content h3 a {font-size:23px; color:#fff}
+.main_section.ver2 .wrap_box.wrap1 .content h3 a strong {color:#fff}
+.main_section.ver2 .wrap_box.wrap1 .content h3 a .txt {font-weight:normal}
+.main_section.ver2 .wrap_box.wrap1 .content h3 a .date {display:block;padding:7px 0 0;font-size:13px;font-weight:300;letter-spacing:0.5px;opacity:1;}
+.main_section.ver2 .wrap_box.wrap1 .content .btn {margin:0 -3px;overflow:hidden;}
+.main_section.ver2 .wrap_box.wrap1 .content .btn .area {float:left;width:50%;padding:0 3px;box-sizing:border-box;}
+.main_section.ver2 .wrap_box.wrap1 .content .btn .btn_common.smid {padding:0;width:100%;}
+.main_section.ver2 .wrap_box.wrap1 .win .go.prev {left:-35px;top:140px;}
+.main_section.ver2 .wrap_box.wrap1 .win .go.next {right:-35px;top:140px;}
+
+.main_section.ver2 .wrap_box.wrap1 .win645 {width:312px;background:#227dbd;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .num {margin-top:40px;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .num .ball_645 {width:26px;height:26px;line-height:24px;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .num span:nth-child(2) {margin-left:0;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .num span ~ span {margin-left:4px;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .num .bonus {height:26px;background-size:14px 14px;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .result {width:230px;margin:22px auto 30px;border:1px solid #3d8fc9;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .result dt {height:40px;line-height:38px;color:#fff;font-size:18px;background:#11629c;border-bottom:1px solid #3d8fc9;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .result dd {height:68px;line-height:68px;color:#fff;font-size:14px;}
+.main_section.ver2 .wrap_box.wrap1 .win645 .content .result dd strong {display:inline-block;margin-right:5px;font-size:24px;}
+
+.main_section.ver2 .wrap_box.wrap1 .win720 {left:312px;top:0;width:608px;height:100%;background:#2c6c9b;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win_num_wrap {padding:7px 0;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win_num_wrap:nth-of-type(1) {margin-top:20px;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win_num_wrap.tb_line {margin:10px 0 17px;padding:12px 0;border-top:1px solid rgba(255,255,255,0.3);border-bottom:1px solid rgba(255,255,255,0.3);}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win_num_wrap .win_money dt {width:44px;line-height:20px;color:#fff;font-size:14px;font-weight:400;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win_num_wrap .win_money dd {line-height:20px;;color:#fff;font-size:14px;font-weight:400;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win_num_wrap .win_money dd .num {color:#64e4ff;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .num {margin-left:2px;padding:3px;width:42px;height:42px;}
+
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .num span {line-height:27px;font-size:20px;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .group {width:70px;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .group em {color:#fff;font-size:18px;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .group .num span {line-height:29px;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .group.bonus {height:42px;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .group.bonus .num {width:auto;padding:0;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .group.bonus .num span,
+.main_section.ver2 .wrap_box.wrap1 .win720 .win720_num .group.bonus .num + em {line-height:40px;color:#fff;font-size:20px;font-weight:bold;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .btn {width:390px;margin:0 auto;}
+
+.main_section.ver2 .wrap_box.wrap1 .speetto-new .content h3 a {font-size:14px;}
+
+/************************************************************** JJANG s (2020524) **************************************************************/
+.main_section.ver2 .wrap_box.wrap1 .win720 .content .btn {width:534px;margin:0 -3px;}
+.main_section.ver2 .wrap_box.wrap1 .win720 .content .btn .area {width:33.33%;}
+.main_section .wrap_box.wrap3 .board {top:0;height:100%;} 
+
+.rolling_tip {position:absolute;right:40px;top:21px;width:410px;height:32px;padding-left:58px;box-sizing:border-box;overflow:hidden;}
+.rolling_tip dt {position:absolute;left:0;top:0;width:78px;height:100%;line-height:28px;font-size:14px;font-weight:500;text-align:center;background:#fcd153;border:1px solid #fcd153;border-radius:16px;}
+.rolling_tip dd {float:left;width:100%;height:100%;padding:3px 15px 0 35px;border:1px solid #fcd153;border-radius:0 16px 16px 0;box-sizing:border-box;}
+#tip_list li {color:#fff;font-size:13px}
+
+/* 당첨자 인터뷰 */
+.main_section .interview_list {position:relative;padding:30px 0 30px 30px;border:1px solid #d9d9d9;overflow:hidden;}
+.main_section .interview_list h2 {color:#333;font-size:18px;font-weight:normal;}
+.main_section .interview_list .more {position:absolute;right:20px;top:26px;width:28px; height:28px; text-indent:-999em; overflow:hidden}
+.main_section .interview_list .more:before {width:10px; height:2px; margin:-1px -5px 0 0;content:""; position:absolute; right:50%; top:50%; background:#8a8a8a}
+.main_section .interview_list .more:after {width:2px; height:10px; margin:-5px -1px 0 0;content:""; position:absolute; right:50%; top:50%; background:#8a8a8a}
+.main_section .interview_list .list li {position:relative;float:left;margin:17px 0 0 30px;width:360px;}
+.main_section .interview_list .list li:nth-child(3n+1) {margin-left:0;}
+.main_section .interview_list .list li a {display:block;padding:10px;border:1px solid #ddd;overflow:hidden;}
+.main_section .interview_list .list li .img_area {float:left;margin-right:20px;}
+.main_section .interview_list .list li .img_area img {width:152px;height:118px;border:1px solid #ddd;}
+.main_section .interview_list .list li .division {color:#666;font-size:13px;}
+.main_section .interview_list .list li .division span {display:block;line-height:16px;font-weight:400;color:#227dbd}
+.main_section .interview_list .list li .division span + span {color:#0a857e;}
+.main_section .interview_list .list li .txt {margin:15px 0 0;height:42px;line-height:20px;color:#333;font-size:14px;font-weight:500;overflow:hidden;}
+.main_section .interview_list .list li .date {position:absolute;left:184px;bottom:15px;color:#666;font-size:12px;}
+
+/* 버튼 */
+.btn_common.navy {background:#2f516a;border-color:#2f516a}
