@@ -22,7 +22,7 @@
 <script type="text/javascript" src="${path}/resources/js/common.js" charset="utf-8"></script>            
 </head>
 <body>
-
+			
 <script type="text/javascript">
 	$(document).ready(function(){
 		var curPage = document.location.href;
@@ -214,7 +214,7 @@
 
 	<div class="header_con">
 	   	<div class="logo">
-			<h1><a href="index">동행복권</a></h1>
+			<h1><a href="/common.do?method=main">동행복권</a></h1>
 	    </div>
 		<div class="top_menu">
 			
@@ -226,7 +226,7 @@
 		
 			<ul class="account">
 				<li class="log"><a class="btn_common sml" href="login">로그인</a></li>
-				<li class="devide"><a class="btn_common sml blu" href="/loginJoin.do?method=joinFormAgree">회원가입</a></li>
+				<li class="devide"><a class="btn_common sml blu" href="createUser">회원가입</a></li>
 				<li><a class="btn_common sml gblu" href="/userSsl.do?method=myPage">마이페이지</a></li>
 				<li><a class="btn_common sml gblu" href="/counsel.do?method=callCenter">고객센터</a></li>
 			</ul>
@@ -253,8 +253,8 @@
 	<div id="gnb" class="gnb">
         <ul>
             <!-- <li class="gnb1"><a href="/gameBuy.do?method=gameBuyHome"></a></li> -->
-            <li class="gnb1"><a href="process">복권구매</a>
-            	<div class="group" style="display:block;">
+            <li class="gnb1"><a href="javascript:void(0)">복권구매</a>
+            	<div class="group">
 	            	<ul>
 	            		<li class="gnb1_1"><a href="javascript:goLottoBuy(2);" title="새창 열림" onclick="javascript:goWiseLogMain('&wiselog=H_A_1_1');"><strong>로또 6/45</strong><span>매주 토요일 추첨<br>6개 숫자 직접 선택</span></a></li>
 	            		<li class="gnb1_2"><a href="javascript:goGame('LD14',2);" title="새창 열림" onclick="javascript:goWiseLogMain('&wiselog=H_A_1_2');"><strong>파워볼</strong><span>5분마다 추첨<br>최고당첨금 3억원</span></a></li>
