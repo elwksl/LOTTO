@@ -22,18 +22,18 @@ public class ParkController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	/*
-	 * @RequestMapping(value = "/index", method = RequestMethod.GET) public String
-	 * home(Locale locale, Model model) {
-	 * logger.info("Welcome home! The client locale is {}.", locale);
-	 * 
-	 * Date date = new Date(); DateFormat dateFormat =
-	 * DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-	 * 
-	 * String formattedDate = dateFormat.format(date);
-	 * 
-	 * model.addAttribute("serverTime", formattedDate );
-	 * 
-	 * return "common/index"; }
-	 */
+//  복권정보 클릭 -> 1번째 페이지 로또6/45 소개로 이동
+	@RequestMapping(value = "/lotto/info/", method = RequestMethod.GET)
+	public String lotto_info(Locale locale, Model model) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "common/index";
+	}
 }

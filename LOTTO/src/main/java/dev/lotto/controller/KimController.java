@@ -22,18 +22,31 @@ public class KimController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	/*
-	 * @RequestMapping(value = "/index", method = RequestMethod.GET) public String
-	 * home(Locale locale, Model model) {
-	 * logger.info("Welcome home! The client locale is {}.", locale);
-	 * 
-	 * Date date = new Date(); DateFormat dateFormat =
-	 * DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-	 * 
-	 * String formattedDate = dateFormat.format(date);
-	 * 
-	 * model.addAttribute("serverTime", formattedDate );
-	 * 
-	 * return "common/index"; }
-	 */
+	@RequestMapping(value = "/process", method = RequestMethod.GET)
+	public String process(Locale locale, Model model) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "park/process";
+	}
+	
+	@RequestMapping(value = "/procei", method = RequestMethod.GET)
+	public String procei(Locale locale, Model model) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "park/processi";
+	}
 }

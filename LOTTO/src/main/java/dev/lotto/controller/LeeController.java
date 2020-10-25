@@ -64,34 +64,4 @@ public class LeeController {
 		
 		return "common/index";
 	}
-	
-//  로그인 클릭 후 접속시
-	@RequestMapping(value = "/process", method = RequestMethod.GET)
-	public String process(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "park/process";
-	}
-	
-	@RequestMapping(value = "/procei", method = RequestMethod.GET)
-	public String procei(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "park/processi";
-	}
-	
 }
