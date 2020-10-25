@@ -1,0 +1,379 @@
+@charset "euc-kr";
+
+.button {
+    display:inline-block; overflow:hidden; vertical-align:middle; border:1px solid #ccc; font-size:12px; line-height:normal; color:#3f3f3f; padding:2px 4px 3px; border-radius:3px; cursor:pointer; box-sizing:border-box;
+    background: #ffffff;
+    background:-moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #e8e8e8 50%, #ffffff 100%);
+    background:-webkit-linear-gradient(top, #ffffff 0%,#ffffff 50%,#e8e8e8 50%,#ffffff 100%);
+    background:linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#e8e8e8 50%,#ffffff 100%);
+    -webkit-box-shadow:1px 1px 0px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow:1px 1px 0px 0px rgba(0,0,0,0.07);
+    box-shadow:1px 1px 0px 0px rgba(0,0,0,0.07);
+
+}
+.button.confirm {
+    border:1px solid #444; color:#fff;
+    background: #555;
+    background:-moz-linear-gradient(top, #555 0%, #555 50%, #666 50%, #565656 100%);
+    background:-webkit-linear-gradient(top, #555 0%,#555 50%,#666 50%,#565656 100%);
+    background:linear-gradient(to bottom, #555 0%,#555 50%,#666 50%,#565656 100%);
+    -webkit-box-shadow:1px 1px 0px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow:1px 1px 0px 0px rgba(0,0,0,0.07);
+    box-shadow:1px 1px 0px 0px rgba(0,0,0,0.07);
+}
+
+.button.lrg {
+    font-size:13px; padding:4px 15px 5px;
+    -webkit-box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+    box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+}
+.button.sml {padding:0 4px}
+
+.game-645-wrap{width:900px; height:645px; background:url(../img/bg.png)}
+.game-645-wrap .game-645-header {height:136px; padding:17px 18px 0 18px}
+.game-645-wrap .game-645-header:after {content:""; display:block; clear:both}
+.game-645-wrap .game-645-header .current {float:left; position:relative; z-index:2; width:564px; padding:13px 0 0 14px}
+.game-645-wrap .game-645-header .current .now {float:left; width:159px}
+.game-645-wrap .game-645-header .current .now h2 {font-size:15px; color:#f1f1f1}
+.game-645-wrap .game-645-header .current .now h2 strong {font-size:20px; color:#fefb18}
+.game-645-wrap .game-645-header .current .now h2 span {text-shadow:0 1px 0px rgba(0, 0, 0, 0.7); padding-right:9px}
+.game-645-wrap .game-645-header .current .now h2 span ~ span {padding-left:5px; padding-right:0}
+.game-645-wrap .game-645-header .current .now > p {margin-top:5px; font-size:15px; color:#f1f1f1}
+.game-645-wrap .game-645-header .current .now > p strong {font-size:18px; color:#fefb18}
+.game-645-wrap .game-645-header .current .now > p span {font-weight:bold; text-shadow:0 1px 0px rgba(0, 0, 0, 0.7); padding-right:5px}
+.game-645-wrap .game-645-header .current .prize_and {float:right}
+.game-645-wrap .game-645-header .current .prize_and li {float:left; width:200px; padding:2px 0 0 24px}
+.game-645-wrap .game-645-header .current .prize_and li ~ li {float:left; width:190px; padding:2px 0 0 19px}
+.game-645-wrap .game-645-header .current .prize_and li span,
+.game-645-wrap .game-645-header .current .prize_and li strong {display:block; font-weight:bold; color:#f1f1f1}
+.game-645-wrap .game-645-header .current .prize_and li span {float:left; font-size:13px; text-shadow:0 1px 0px rgba(0, 0, 0, 0.7)}
+.game-645-wrap .game-645-header .current .prize_and li strong {clear:both; padding-top:5px; font-size:24px; text-shadow:0 2px 0px rgba(0, 0, 0, 0.7); color:#fff}
+.game-645-wrap .game-645-header .current .prize_and li div {float:left; position:relative; margin:-2px 0 0 5px}
+.game-645-wrap .game-645-header .current .prize_and li div a {display:inline-block; position:relative; width:18px; height:18px; border-radius:100%; background:#e4e4e4; text-indent:-999em; overflow:hidden; text-shadow:0 2px 0px rgba(0, 0, 0, 0.7)}
+.game-645-wrap .game-645-header .current .prize_and li div a:after {content:"\003F"; position:absolute; left:0; top:0; width:100%; height:100%; text-align:center; line-height:18px; font-size:14px; font-weight:bold; color:#000; text-indent:0; text-shadow:none}
+.game-645-wrap .game-645-header .current .prize_and li div a:hover + p,
+.game-645-wrap .game-645-header .current .prize_and li div a:focus + p {display:block}
+.game-645-wrap .game-645-header .current .prize_and li div p {display:none; position:absolute; left:50%; top:100%; margin-left:-155px; margin-top:-3px; width:311px; height:79px; padding:23px 10px 0 10px; font-size:14px; line-height:18px; color:#333; background:url(../img/bg-layer-tip.png); text-align:center; letter-spacing:-0.05em}
+.game-645-wrap .game-645-header .current .prize_and li div ~ strong {padding-top:1px}
+.game-645-wrap .game-645-header .past {float:right; position:relative; width:268px; color:#fff}
+.game-645-wrap .game-645-header .past h3 {padding-top:6px; font-size:18px; text-shadow:0px 2px 2px rgba(0, 0, 0, .9);}
+.game-645-wrap .game-645-header .past h3 strong {color:#eaea31}
+.game-645-wrap .game-645-header .past .watch {position:absolute; right:0; top:0; width:87px; height:22px; text-align:center; font-weight:bold; color:#fff; padding-top:8px; background:url(../img/btn-watch.png); text-shadow:0 1px 0px rgba(0, 0, 0, 0.7)}
+.game-645-wrap .game-645-header .past p {margin-top:15px}
+.game-645-wrap .game-645-header .past p:after {content:""; display:block; clear:both}
+.game-645-wrap .game-645-header .past p * {float:left}
+.game-645-wrap .game-645-header .past p > span ~ span {margin-left:3px}
+.game-645-wrap .game-645-header .past p .ext {height:32px; width:16px; text-indent:-999em; background:url(../img/ico-num-bonus.png) 50% 50% no-repeat}
+.game-645-wrap .game-645-header .past p .ball {position:relative; width:32px; height:32px; border-radius:100%; overflow:hidden}
+.game-645-wrap .game-645-header .past p .ball span {display:block; position:relative; z-index:1; width:100%; line-height:30px; text-align:center; font-size:16px; font-weight:bold; color:#fff}
+.game-645-wrap .game-645-header .past p .ball:before {content:""; position:absolute; left:0; top:0; width:100%; height:100%; background:url(../img/bg-highlight-ball.png)}
+.game-645-wrap .game-645-header .past p .ball.color1 {
+    background:#f2cc74;
+    background:-moz-linear-gradient(top, #eccd84 0%, #d5ac56 100%);
+    background:-webkit-linear-gradient(top, #eccd84 0%,#d5ac56 100%);
+    background:linear-gradient(to bottom, #eccd84 0%,#d5ac56 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#eccd84', endColorstr='#d5ac56',GradientType=0 );
+}
+.game-645-wrap .game-645-header .past p .ball.color2 {
+    background:#69a6e7;
+    background:-moz-linear-gradient(top, #7aade2 0%, #4e88cf 100%);
+    background:-webkit-linear-gradient(top, #7aade2 0%,#4e88cf 100%);
+    background:linear-gradient(to bottom, #7aade2 0%,#4e88cf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#7aade2', endColorstr='#4e88cf',GradientType=0 );
+}
+.game-645-wrap .game-645-header .past p .ball.color3 {
+    background:#fd7464;
+    background:-moz-linear-gradient(top, #f58477 0%, #dd5649 100%);
+    background:-webkit-linear-gradient(top, #f58477 0%,#dd5649 100%);
+    background:linear-gradient(to bottom, #f58477 0%,#dd5649 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58477', endColorstr='#dd5649',GradientType=0 );
+}
+.game-645-wrap .game-645-header .past p .ball.color4 {
+    background:#5b5c5d;
+    background:-moz-linear-gradient(top, #707070 0%, #484f56 100%);
+    background:-webkit-linear-gradient(top, #707070 0%,#484f56 100%);
+    background:linear-gradient(to bottom, #707070 0%,#484f56 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#707070', endColorstr='#484f56',GradientType=0 );
+}
+.game-645-wrap .game-645-header .past p .ball.color5 {
+    background:#97e086;
+    background:-moz-linear-gradient(top, #a0dc92 0%, #73c163 100%);
+    background:-webkit-linear-gradient(top, #a0dc92 0%,#73c163 100%);
+    background:linear-gradient(to bottom, #a0dc92 0%,#73c163 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0dc92', endColorstr='#73c163',GradientType=0 );
+}
+.game-645-wrap .game-645-header .past p .ball.color1 span {text-shadow:0px 0px 5px rgba(202, 147, 31, 1);}
+.game-645-wrap .game-645-header .past p .ball.color2 span {text-shadow:0px 0px 5px rgba(39, 115, 200, 1);}
+.game-645-wrap .game-645-header .past p .ball.color3 span {text-shadow:0px 0px 5px rgba(212, 50, 33, 1);}
+.game-645-wrap .game-645-header .past p .ball.color4 span {text-shadow:0px 0px 5px rgba(77, 77, 77, 1);}
+.game-645-wrap .game-645-header .past p .ball.color5 span {text-shadow:0px 0px 5px rgba(78, 169, 57, 1);}
+.game-645-footer {padding-top:25px}
+.game-645-footer::after {content:""; display:block; clear:both}
+.game-645-footer .links {float:left; padding:11px 0 0 15px}
+.game-645-footer .links::after {content:""; display:block; clear:both}
+.game-645-footer .links li {float:left; position:relative; width:104px; padding-right:2px}
+.game-645-footer .links li::before,
+.game-645-footer .links li::after {content:""; position:absolute; right:0; top:8px; height:31px; border-right:1px solid #000}
+.game-645-footer .links li::after {margin-right:1px; border-color:#4a4a4a}
+.game-645-footer .links li:last-child::before,
+.game-645-footer .links li:last-child::after {display:none}
+.game-645-footer .links li a {display:block; padding-top:32px; color:#fff; font-size:13px; text-align:center; text-shadow:0 2px 0px rgba(0, 0, 0, 0.9)}
+.game-645-footer .links li.link1 a {background:url(../img/ico-foot-link1.png) 50% 0 no-repeat}
+.game-645-footer .links li.link2 a {background:url(../img/ico-foot-link2.png) 50% 1px no-repeat}
+.game-645-footer .links li.link3 a {background:url(../img/ico-foot-link3.png) 50% 0 no-repeat}
+.game-645-footer .links li.link4 a {background:url(../img/ico-foot-link4.png) 50% 3px no-repeat}
+.game-645-footer .notice {float:right; position:relative; overflow:hidden; width:447px; height:66px; margin-right:2px}
+.game-645-footer .notice::after {content:""; position:absolute; left:0; top:0; width:100%; height:66px; background:url(../img/bg-cover-mq.png)}
+.game-645-footer .notice .inner {position:absolute; left:0; top:100px; width:100%}
+.game-645-footer .notice .inner .text {padding:10px 30px; padding-bottom:0; min-height:66px}
+.game-645-footer .notice .inner .text p {font-size:13px; line-height:20px; color:#fff; text-shadow:0 2px 0px rgba(0, 0, 0, 0.9);}
+
+.game-645-content {padding:0 18px}
+.game-645-content:after {content:""; display:block; clear:both}
+.game-645-content .select-number {float:left; width:413px; height:416px}
+.game-645-content .select-number .header {float:left; width:169px}
+.game-645-content .select-number .header h3 {position:absolute; left:-999em; font-size:0; line-height:0; width:0; height:0; opacity:0}
+.game-645-content .select-number .header ul {padding:16px 15px 0 16px}
+.game-645-content .select-number .header ul li ~ li {margin-top:8px}
+.game-645-content .select-number .header ul li a {
+    display:block; padding:12px 15px 11px; border:1px solid #ccc; color:#333; border-radius:4px;
+    background:#f2f2f2;
+    background:-moz-linear-gradient(top, #fff 0%, #e5e5e5 100%);
+    background:-webkit-linear-gradient(top, #fff 0%,#e5e5e5 100%);
+    background:linear-gradient(to bottom, #fff 0%,#e5e5e5 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#e5e5e5',GradientType=0 );
+}
+.game-645-content .select-number .header ul li a strong {display:block; font-size:14px}
+.game-645-content .select-number .header ul li a span {display:block; margin-top:6px; line-height:15px}
+.game-645-content .select-number .header ul li.active a {
+    color:#fff; border-color:#d55454;
+    background:#e96767;
+    background:-moz-linear-gradient(top, #f56d6d 0%, #dc6262 100%);
+    background:-webkit-linear-gradient(top, #f56d6d 0%,#dc6262 100%);
+    background:linear-gradient(to bottom, #f56d6d 0%,#dc6262 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f56d6d', endColorstr='#dc6262',GradientType=0 );
+}
+.game-645-content .select-number .ways {float:right; width:244px}
+.game-645-content .select-number .ways .way1 {padding:17px 14px 0}
+.game-645-content .select-number .ways .way1 .paper:after {content:""; display:block; clear:both}
+.game-645-content .select-number .ways .way1 .paper .top strong {float:left; width:54px; height:41px; border:1px solid #fab6b6; border-right:0; border-radius:0; text-align:center; line-height:41px; font-size:20px; font-weight:normal; color:#f56d6d}
+.game-645-content .select-number .ways .way1 .paper .top > span {float:left; width:calc(100% - 55px); height:43px; overflow:hidden; text-align:center; font-size:20px; color:#fff; background:url(../img/bg-paper-payment.png) 50% 50% repeat-x; background-size:auto 100%}
+.game-645-content .select-number .ways .way1 .paper .top > span span {display:inline-block; line-height:42px; vertical-align:top}
+.game-645-content .select-number .ways .way1 .paper .top > span span ~ span {font-size:16px; padding:0 0 0 2px; line-height:42px}
+.game-645-content .select-number .ways .way1 .paper .check {position:relative; overflow:hidden; height:294px; padding:15px 5px 0 9px; border:1px solid #fab6b6; border-top:0}
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"] {position:absolute; left:-999em}
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"] + label {float:left; position:relative; width:22px; height:23px; margin:0 3px 10px; text-align:center; line-height:23px; font-size:13px; color:#f56d6d; cursor:pointer; letter-spacing:-0.05em}
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"] + label:before,
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"] + label:after {content:""; position:absolute; left:0; width:100%; height:6px; background-image:url(../img/bg-check-number.png); background-repeat:no-repeat}
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"] + label:before {background-position:0 0; top:0}
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"] + label:after {background-position:0 100%; bottom:0}
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"]:checked + label {background:#555; color:#fff}
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"]:checked + label:before,
+.game-645-content .select-number .ways .way1 .paper .check > input[type="checkbox"]:checked + label:after {display:none}
+.game-645-content .select-number .ways .way1 .paper .action {position:absolute; left:0; bottom:0; right:0; padding-bottom:20px; text-align:center}
+.game-645-content .select-number .ways .way1 .paper .action .checkbox {position:absolute; left:-999em}
+.game-645-content .select-number .ways .way1 .paper .action .btn,
+.game-645-content .select-number .ways .way1 .paper .action .checkbox + label {position:relative; display:inline-block; height:22px; vertical-align:top; margin:0 1px; cursor:pointer}
+.game-645-content .select-number .ways .way1 .paper .action .btn:before,
+.game-645-content .select-number .ways .way1 .paper .action .btn:after,
+.game-645-content .select-number .ways .way1 .paper .action .checkbox + label:before,
+.game-645-content .select-number .ways .way1 .paper .action .checkbox + label:after {content:""; position:absolute; top:0; height:100%; width:6px; background-repeat:no-repeat; background-image:url(../img/bg-check-number-btn.png)}
+.game-645-content .select-number .ways .way1 .paper .action .btn:before,
+.game-645-content .select-number .ways .way1 .paper .action .checkbox + label:before {left:0; background-position:0 0}
+.game-645-content .select-number .ways .way1 .paper .action .btn:after,
+.game-645-content .select-number .ways .way1 .paper .action .checkbox + label:after {right:0; background-position:100% 0}
+.game-645-content .select-number .ways .way1 .paper .action .btn input[type="button"],
+.game-645-content .select-number .ways .way1 .paper .action .checkbox + label span {display:block; position:relative; z-index:1; padding:0 5px; font-size:13px; height:22px; line-height:22px; color:#f56d6d; letter-spacing:-0.05em}
+.game-645-content .select-number .ways .way1 .paper .action .btn input[type="button"] {border:0; background:transparent; cursor:pointer}
+.game-645-content .select-number .ways .way1 .paper .action .checkbox:checked + label span {color:#fff; background:#555}
+.game-645-content .select-number .ways .way1 .paper .box-autoselect {position:absolute; z-index:1; left:0; top:0; width:100%; height:100%; text-align:center; background:rgba(255,255,255,.5)}
+.game-645-content .select-number .ways .way1 .paper .box-autoselect::after {content:""; display:inline-block; width:0; height:100%; vertical-align:middle}
+.game-645-content .select-number .ways .way1 .paper .box-autoselect .inner {
+    display:inline-block; width:82%; vertical-align:middle; margin-top:-40px; border-top:1px solid #f78e8e; border-right:1px solid #cd5b5b; border-bottom:1px solid #be5555; border-left:1px solid #f68282;
+    -webkit-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow:3px 3px 6px 0px rgba(0,0,0,0.45);
+    box-shadow:3px 3px 6px 0px rgba(0,0,0,0.45);
+}
+.game-645-content .select-number .ways .way1 .paper .box-autoselect .inner .inner2 {
+    padding:23px 5px 26px; border:2px solid #f56d6d; background:#fff;
+    -webkit-box-shadow:inset 4px 4px 4px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow:inset 4px 4px 4px 0px rgba(0,0,0,0.1);
+    box-shadow:inset 4px 4px 4px 0px rgba(0,0,0,0.1);
+}
+.game-645-content .select-number .ways .way1 .paper .box-autoselect .inner .inner2 p {font-size:15px; font-weight:bold; line-height:20px; color:#333}
+.game-645-content .select-number .ways .way1 .amount {margin-top:15px}
+.game-645-content .select-number .ways .way1 .amount * {float:left}
+.game-645-content .select-number .ways .way1 .amount label {float:left; height:30px; line-height:29px; padding-left:10px; margin-right:15px; font-size:14px; color:#333}
+.game-645-content .select-number .ways .way1 .amount select {
+    width:65px; height:30px; padding-left:7px; border:1px solid #a7a7a7; border-radius:3px; font-size:14px; font-weight:bold; color:#333;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    -webkit-box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+    box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+    background:url(../img/ico-selectbox.png) 100% 50% no-repeat #fefefe;
+}
+.game-645-content .select-number .ways .way1 .amount .button {float:right}
+.game-645-content .select-number .ways .mynum {padding:24px 19px 0}
+.game-645-content .select-number .ways .mynum h4 {height:32px; font-size:15px; font-weight:normal; color:#555}
+.game-645-content .select-number .ways .mynum .my-number {height:291px; overflow-x:hidden; overflow-y:auto; border-top:1px solid #ddd; border-bottom:1px solid #ddd}
+.game-645-content .select-number .ways .mynum .my-number li {position:relative; height:58px; padding-left:27px; background:url(../img/bg-line-dash.png) 0 100% repeat-x}
+.game-645-content .select-number .ways .mynum .my-number li:last-child {height:57px; background:none}
+.game-645-content .select-number .ways .mynum .my-number li input[type="checkbox"] {position:absolute; left:6px; top:21px; width:16px; height:16px; border:1px solid #bbb}
+.game-645-content .select-number .ways .mynum .my-number li span {float:left;}
+.game-645-content .select-number .ways .mynum .my-number li .type {width:40px; line-height:56px; font-size:13px; color:#777}
+.game-645-content .select-number .ways .mynum .my-number li .nums span {width:22px; font-size:14px; color:#555; line-height:56px; text-align:center;}
+.game-645-content .select-number .ways .mynum .my-number li.nodata {height:auto; padding:140px 0 0 0; text-align:center; background:none}
+.game-645-content .select-number .ways .mynum .btn {margin-top:20px; text-align:center}
+.game-645-content .select-number .ways .mynum.way3 .my-number li {padding-left:32px}
+.game-645-content .select-number .ways .mynum.way3 .my-number li .nums span {width:24px}
+.game-645-content .select-number .ways .mynum.way3 .my-number li.nodata {height:auto; padding:140px 0 0 0; text-align:center; background:none}
+
+.game-645-content .selected-games {float:right; width:429px; height:416px}
+.game-645-content .selected-games .header {height:57px}
+.game-645-content .selected-games .header:after {content:""; display:block; clear:both}
+.game-645-content .selected-games .header h3 {float:left; padding-left:17px; line-height:54px; font-size:15px; letter-spacing:-0.05em; color:#333}
+.game-645-content .selected-games .header .button {float:right; margin:11px 17px 0 0}
+.game-645-content .selected-games .game {height:280px}
+.game-645-content .selected-games .game:after {content:""; display:block; clear:both}
+.game-645-content .selected-games .game ul li {position:relative; height:56px; padding:13px 16px 13px 20px}
+.game-645-content .selected-games .game ul li:hover {background:#f1f6f8}
+.game-645-content .selected-games .game ul li:after {content:""; display:block; clear:both}
+.game-645-content .selected-games .game ul li:before {content:""; position:absolute; left:20px; bottom:0; right:17px; border-bottom:1px dashed #e5e5e5}
+.game-645-content .selected-games .game ul li:last-child:before {display:none}
+.game-645-content .selected-games .game ul li > strong,
+.game-645-content .selected-games .game ul li > strong * {float:left}
+.game-645-content .selected-games .game ul li > strong {width:67px}
+.game-645-content .selected-games .game ul li > strong span {line-height:30px; font-size:15px; color:#2d2d2d; font-weight:normal}
+.game-645-content .selected-games .game ul li > strong span ~ span {margin-left:3px}
+.game-645-content .selected-games .game ul li .nums,
+.game-645-content .selected-games .game ul li .nums * {float:left}
+.game-645-content .selected-games .game ul li .nums {width:188px}
+.game-645-content .selected-games .game ul li .nums span {position:relative; width:30px; height:30px; text-align:center; line-height:30px; font-size:15px; font-weight:bold; color:#fff; background:#eee; border-radius:100%}
+.game-645-content .selected-games .game ul li .nums span ~ span {margin-left:1px}
+.game-645-content .selected-games .game ul li .nums span.ball {background:#8f96a0; text-indent:-999em;}
+.game-645-content .selected-games .game ul li .nums span.ball:after {content:"*"; position:absolute; left:0; top:0; width:100%; height:100%; font-size:23px; line-height:38px; text-indent:0}
+.game-645-content .selected-games .game ul li .nums span.color1 {background:#f4cf77}
+.game-645-content .selected-games .game ul li .nums span.color2 {background:#6aa7e8}
+.game-645-content .selected-games .game ul li .nums span.color3 {background:#ff7666}
+.game-645-content .selected-games .game ul li .nums span.color4 {background:#5a5e62}
+.game-645-content .selected-games .game ul li .nums span.color5 {background:#98e187}
+.game-645-content .selected-games .game ul li .nums span[class*="color"] {text-indent:0}
+.game-645-content .selected-games .game ul li .nums span[class*="color"]:after {display:none}
+.game-645-content .selected-games .game ul li .btn {float:right; padding-top:2px}
+.game-645-content .selected-games .game ul li .btn .button {float:left}
+.game-645-content .selected-games .game ul li .btn .button ~ .button {margin-left:3px}
+.game-645-content .selected-games .footer {position:relative; margin:14px; margin-bottom:0}
+.game-645-content .selected-games .footer:after {content:""; display:block; clear:both}
+.game-645-content .selected-games .footer .set {float:left; width:142px}
+.game-645-content .selected-games .footer .set ~ .set {float:left; width:165px; text-align:center}
+.game-645-content .selected-games .footer .set > span {display:block; height:20px; line-height:19px; font-size:13px; color:#777}
+.game-645-content .selected-games .footer .set > strong {display:block}
+.game-645-content .selected-games .footer .set1 {position:relative;}
+.game-645-content .selected-games .footer .set1::before,
+.game-645-content .selected-games .footer .set1::after {content:""; position:absolute; right:0; top:10px; height:30px; border-right:1px solid #ccc}
+.game-645-content .selected-games .footer .set1::after {margin-right:1px; border-color:#f4f4f4}
+.game-645-content .selected-games .footer .set1 > span {float:left}
+.game-645-content .selected-games .footer .set1 > .button {float:left; margin-left:8px}
+.game-645-content .selected-games .footer .set1 strong {padding-top:9px; font-size:18px; color:#333; clear:both}
+.game-645-content .selected-games .footer .set1 strong:after {content:""; display:block; clear:both}
+.game-645-content .selected-games .footer .set1 strong span {float:left}
+.game-645-content .selected-games .footer .set1 strong span ~ span {font-size:16px}
+.game-645-content .selected-games .footer .set2 strong {margin-top:1px; color:#f3661a; font-size:28px}
+.game-645-content .selected-games .footer .set2 strong span ~ span {font-size:20px}
+.game-645-content .selected-games .footer .buy {
+    position:absolute; right:1px; top:2px; width:88px; height:48px; border-color:#007dc6; font-size:16px; font-weight:bold; color:#fff;
+    background: #008adb;
+    background:-moz-linear-gradient(top, #008adb 0%, #008adb 50%, #007ec8 50%, #099ce0 100%);
+    background:-webkit-linear-gradient(top, #008adb 0%,#008adb 50%,#007ec8 50%,#099ce0 100%);
+    background:linear-gradient(to bottom, #008adb 0%,#008adb 50%,#007ec8 50%,#099ce0 100%);
+    -webkit-box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+    box-shadow:2px 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+/* �닌됤꼻占쎈똻占쏙옙 占쏙옙占쏙옙 占쏙옙占쎈똻占쏙옙 */
+.layer-receipt {position:fixed; z-index:1000; left:0; top:0; width:900px; height:645px; background:rgba(0,0,0,.5); text-align:center}
+.layer-receipt::after {content:""; display:inline-block; width:0; height:100%; vertical-align:middle}
+.layer-receipt .paper {display:inline-block; width:380px; padding:28px 30px 30px; background:#fff; border-radius:3px; vertical-align:middle; text-align:left; color:#555}
+.layer-receipt .paper.ui-draggable {cursor:move}
+.layer-receipt .paper h2 {font-size:16px; color:#2d2d2d; border-bottom:1px solid #ddd; padding-bottom:15px}
+.layer-receipt .paper .date-info {padding:20px 0 17px 10px; border-bottom:1px dashed #ddd}
+.layer-receipt .paper .date-info ul {margin-top:18px}
+.layer-receipt .paper .date-info ul li {font-size:14px; color:#777}
+.layer-receipt .paper .date-info ul li span {display:inline-block; letter-spacing:0.15em}
+.layer-receipt .paper .date-info ul li:last-child span {letter-spacing:0}
+.layer-receipt .paper .date-info ul li ~ li {margin-top:3px}
+.layer-receipt .paper .date-info h3 {padding-left:4px}
+.layer-receipt .paper .date-info h3::after {content:""; display:block; clear:both}
+.layer-receipt .paper .date-info h3 * {float:left;}
+.layer-receipt .paper .date-info h3 span {width:117px; height:44px; background:url(../img/logo-paper.png); text-indent:-999em}
+.layer-receipt .paper .date-info h3 strong {padding-top:12px; margin-left:35px; font-size:25px; color:#333}
+.layer-receipt .paper .date-info .barcode {margin-top:8px; font-size:13px}
+.layer-receipt .paper .date-info .barcode span {display:inline-blopck; white-space:nowrap; color:#777}
+.layer-receipt .paper .date-info .barcode span ~ span {margin-left:3px}
+.layer-receipt .selected {padding-top:20px}
+.layer-receipt .selected ul {padding-bottom:20px; border-bottom:1px dashed #ddd}
+.layer-receipt .selected ul li {font-size:15px; padding-right:4px}
+.layer-receipt .selected ul li::after {content:""; display:block; clear:both}
+.layer-receipt .selected ul li ~ li {margin-top:20px}
+.layer-receipt .selected ul li * {float:left;}
+.layer-receipt .selected ul li strong {font-weight:normal;}
+.layer-receipt .selected ul li strong span {width:16px}
+.layer-receipt .selected ul li strong span ~ span {width:60px}
+.layer-receipt .selected ul li .nums span {width:37px; text-align:center;}
+.layer-receipt .selected ul li .check {float:right; position:relative; overflow:hidden; width:16px; height:14px; margin-top:1px}
+.layer-receipt .selected ul li .check input[type="checkbox"] {position:absolute; left:-999em}
+.layer-receipt .selected ul li .check input[type="checkbox"] + label {width:100%; height:100%; background:url(../img/ico-heart.png); text-indent:-999em; cursor:pointer;}
+.layer-receipt .selected ul li .check input[type="checkbox"]:checked + label {background-position:0 -14px}
+.layer-receipt .selected .total {padding-top:19px; text-align:right; font-size:15px}
+.layer-receipt .btns {margin-top:28px; text-align:center}
+.layer-receipt .btns .button {margin:0 2px; vertical-align:top}
+.layer-receipt .explain {margin-top:18px; text-align:left}
+.layer-receipt .explain span {width:100%; height:100%; padding-left:20px; background:url(../img/ico-heart.png); background-position:0 -14px; background-repeat:no-repeat}
+
+.layer-wait {position:fixed; z-index:1000; left:0; top:0; width:900px; height:645px; background:rgba(0,0,0,.5); text-align:center}
+.layer-wait::after {content:""; display:inline-block; width:0; height:100%; vertical-align:middle}
+.layer-wait .box {display:inline-block; width:500px; padding:28px 30px 30px; background:#fff; border-radius:3px; vertical-align:middle; text-align:left; color:#555}
+.layer-wait .box .head {position:relative; border-bottom:1px solid #ddd; padding-bottom:15px}
+.layer-wait .box .head h2 {font-size:16px; color:#2d2d2d}
+.layer-wait .box .head .close {position:absolute; right:0; top:0; width:16px; height:16px; text-indent:-999em; overflow:hidden; background:url(../img/ico_close_pop.png)}
+.layer-wait .btns {margin-top:20px; padding-top:20px; border-top:1px solid #ddd; text-align:center}
+.layer-wait .btns .button {margin:0 2px; vertical-align:top}
+.layer-wait .status {margin-top:30px}
+.layer-wait .status::after {content:""; display:block; clear:both}
+.layer-wait .status .circle {float:left; width:160px; height:160px; margin-left:9px; background:url(../img/bg_wait.jpg); text-align:center}
+.layer-wait .status .circle::after {content:""; display:inline-block; width:0; height:100%; vertical-align:middle}
+.layer-wait .status .circle span {display:inline-block; vertical-align:middle; color:#007bc3; padding-top:36px; background:url(../img/ico_hourglass.png) 50% 0 no-repeat	}
+.layer-wait .status .message {float:right; padding-top:19px; width:calc(100% - 200px)}
+.layer-wait .status .message .m1 {font-size:22px; color:#333; font-weight:normal}
+.layer-wait .status .message .m1 strong {color:#12a19a; font-weight:normal}
+.layer-wait .status .message .m1 span {display:block; margin-top:8px; font-size:14px; font-weight:normal; color:#777}
+.layer-wait .status .message .m2 {margin-top:20px; padding-top:16px; font-size:15px; line-height:22px; color:#777; border-top:1px dashed #ddd}
+.layer-wait .status .message .m2 strong {font-weight:normal; color:#007bc3}
+.layer-wait .noti {margin-top:30px; padding:20px 8px 0; border-top:1px solid #ddd}
+.layer-wait .noti h3 {font-size:15px; font-weight:normal; color:#333}
+.layer-wait .noti ul {margin-top:5px}
+.layer-wait .noti ul li {line-height:18px; color:#777}
+	
+	
+	
+.layer-loading {position:fixed; z-index:1000; left:0; top:0; width:900px; height:645px; background:rgba(0,0,0,.5); text-align:center}
+.buy-loading {
+	position:relative;
+	left: 45%;
+	top: 45%;
+	z-index:1001;
+	width: 89px;
+	height: 74px;
+	background-image: url("../img/loadingSpin.png");
+	animation: play 1.4s steps(50) infinite;
+}
+
+@keyframes play {
+	from {background-position: 0px; } 
+	to   {background-position: -4450px;}
+}
