@@ -1,13 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<%@ page contentType="text/html; charset=UTF-8" %> 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+
+<link href="${path}/resources/css/layout.css" rel="stylesheet"/>
+<link href="${path}/resources/css/default.css" rel="stylesheet"/> 
+<link href="${path}/resources/css/al720.css" rel="stylesheet"/> 
+<link href="${path}/resources/css/common.css" rel="stylesheet"/>
+<link href="${path}/resources/css/main.css" rel="stylesheet"/>
+<link href="${path}/resources/css/reset.css" rel="stylesheet"/>
+<link href="${path}/resources/css/style.css" rel="stylesheet"/>
+<link href="${path}/resources/css/SpoqaHanSans-kr.css" rel="stylesheet"/>    
+<link href="${path}/resources/css/jecss.css" rel="stylesheet"/>
+<script type="text/javascript" src="${path}/resources/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="${path}/resources/js/jquery-ui.js"></script>
+<script type="text/javascript" src="${path}/resources/js/common.js" charset="utf-8"></script>            
 </head>
 <body>
-			
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		var curPage = document.location.href;
@@ -199,7 +214,7 @@
 
 	<div class="header_con">
 	   	<div class="logo">
-			<h1><a href="/common.do?method=main">동행복권</a></h1>
+			<h1><a href="index">동행복권</a></h1>
 	    </div>
 		<div class="top_menu">
 			
@@ -238,8 +253,8 @@
 	<div id="gnb" class="gnb">
         <ul>
             <!-- <li class="gnb1"><a href="/gameBuy.do?method=gameBuyHome"></a></li> -->
-            <li class="gnb1"><a href="javascript:void(0)">복권구매</a>
-            	<div class="group">
+            <li class="gnb1"><a href="process">복권구매</a>
+            	<div class="group" style="display:block;">
 	            	<ul>
 	            		<li class="gnb1_1"><a href="javascript:goLottoBuy(2);" title="새창 열림" onclick="javascript:goWiseLogMain('&wiselog=H_A_1_1');"><strong>로또 6/45</strong><span>매주 토요일 추첨<br>6개 숫자 직접 선택</span></a></li>
 	            		<li class="gnb1_2"><a href="javascript:goGame('LD14',2);" title="새창 열림" onclick="javascript:goWiseLogMain('&wiselog=H_A_1_2');"><strong>파워볼</strong><span>5분마다 추첨<br>최고당첨금 3억원</span></a></li>

@@ -19,7 +19,7 @@
 <link href="${path}/resources/css/main.css" rel="stylesheet"/>  
 <link href="${path}/resources/css/contents.css" rel="stylesheet"/>  
 </head>
-<%@ include file="/WEB-INF/views/header.jsp" %> 
+<%@ include file="/WEB-INF/views/common/header.jsp" %> 
 <body>
 
 <div class="containerWrap"><!-- pc일 경우 컨텐츠 영역 감싸는 마크업 추가  -->
@@ -286,5 +286,5 @@ jQuery(function($){
 
 
 </body>
-<%@ include file="/WEB-INF/views/footer.jsp" %> 
+<%@ include file="/WEB-INF/views/common/footer.jsp" %> 
 </html>

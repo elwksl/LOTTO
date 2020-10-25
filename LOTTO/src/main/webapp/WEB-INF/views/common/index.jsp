@@ -7,18 +7,14 @@
 	<meta id="desc" name="description" charset="EUC-KR" content="">
 	<title>동행복권</title>
 	
-<c:set var="path" value="${pageContext.request.contextPath}"/>
+
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title> 동행복권</title>
-<link href="${path}/resources/css/layout.css" rel="stylesheet"/>
-<link href="${path}/resources/css/default.css" rel="stylesheet"/> 
-<link href="${path}/resources/css/al720.css" rel="stylesheet"/> 
-<link href="${path}/resources/css/common.css" rel="stylesheet"/>
-<link href="${path}/resources/css/main.css" rel="stylesheet"/>  
 </head>
-<%@ include file="/WEB-INF/views/header.jsp" %> 
+<%@ include file="/WEB-INF/views/common/header.jsp" %> 
 <body >
 <div>
 
@@ -321,5 +317,5 @@ $(".spt_group .slide_inner").slick({
 </div>
 </body>
 <br><br><br><br>
-<%@ include file="/WEB-INF/views/footer.jsp" %>
+<%@ include file="/WEB-INF/views/common/footer.jsp" %>
 </html>

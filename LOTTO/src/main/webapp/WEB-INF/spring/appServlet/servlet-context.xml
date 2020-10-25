@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="kim.lee.park" />
+	<context:component-scan base-package="dev.lotto.controller" />
 	
 	
 	

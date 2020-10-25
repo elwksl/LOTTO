@@ -8,7 +8,7 @@
 </head>
 <body >
 <!-- //접속대기 레이어 -->
-
+<br><br><br><br>
 <footer id="footer" class="footer" >
 	<!-- <div class="footer_container">
 		<div class="footer_wrap"> -->
