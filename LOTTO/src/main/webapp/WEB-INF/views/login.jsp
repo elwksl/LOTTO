@@ -31,9 +31,9 @@
 		<div id="snb" class="lnb">
 	<h2 id="09" class="lnb_title">회원서비스</h2>
 	<ul id="lnb" class="lnb_dep1">
-		<li id="09-01"><a href="/user.do?method=login" class="menuLnb"><span>로그인</span></a>
+		<li id="09-01"><a href="login" class="menuLnb"><span>로그인</span></a>
 		<li id="09-02"><a href="/customer.do?method=findIdPw" class="menuLnb"><span>아이디/비밀번호 찾기</span></a>
-		<li id="09-03"><a href="/loginJoin.do?method=joinFormAgree" class="menuLnb"><span>회원가입</span></a></li>
+		<li id="09-03"><a href="createUser" class="menuLnb"><span>회원가입</span></a></li>
 	</ul>
 </div>
 
@@ -150,7 +150,7 @@
 						</div>
 						<input id="checkSave" name="checkSave" type="checkbox" checked	onClick="checkCookieSaveAdminId();"><label for="checkSave">ID저장</label>
 						<div class="links">
-							<a class="btn_common lrg" href="javascript:join();">회원가입</a>
+							<a class="btn_common lrg" href="createUser">회원가입</a>
 							<a class="btn_common lrg" href="/customer.do?method=findIdPw">아이디/비밀번호찾기</a>
 						</div>
 					</fieldset>

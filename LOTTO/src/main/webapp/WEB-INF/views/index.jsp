@@ -17,7 +17,9 @@
 <link href="${path}/resources/css/al720.css" rel="stylesheet"/> 
 <link href="${path}/resources/css/common.css" rel="stylesheet"/>
 <link href="${path}/resources/css/main.css" rel="stylesheet"/>  
+<link href="${path}/resources/css/test.css" rel="stylesheet"/>  
 </head>
+
 <%@ include file="/WEB-INF/views/header.jsp" %> 
 <body >
 <div>
@@ -315,6 +317,8 @@ $(".spt_group .slide_inner").slick({
     infinite: true,
     arrows: true
 });
+
+
 </script>
 		</div>
 	</div>

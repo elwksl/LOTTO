@@ -211,7 +211,7 @@
 		
 			<ul class="account">
 				<li class="log"><a class="btn_common sml" href="login">로그인</a></li>
-				<li class="devide"><a class="btn_common sml blu" href="/loginJoin.do?method=joinFormAgree">회원가입</a></li>
+				<li class="devide"><a class="btn_common sml blu" href="createUser">회원가입</a></li>
 				<li><a class="btn_common sml gblu" href="/userSsl.do?method=myPage">마이페이지</a></li>
 				<li><a class="btn_common sml gblu" href="/counsel.do?method=callCenter">고객센터</a></li>
 			</ul>
