@@ -23,6 +23,9 @@
 	
 	<context:component-scan base-package="dev.lotto.controller" />
 	
+	<beans:bean  id="ShopService" class="dev.lotto.service.ShopServiceImpl">
+	</beans:bean>
 	
-	
+	<beans:bean  id="ShopDto" class="dev.lotto.dto.ShopDtoImpl">
+	</beans:bean>
 </beans:beans>
