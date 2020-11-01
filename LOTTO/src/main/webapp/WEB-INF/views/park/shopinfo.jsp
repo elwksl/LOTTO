@@ -119,7 +119,6 @@
 									<h5>지역 선택</h5>
 								</div>
 								<div id="mainMenuArea" class="area">
-									<!-- <span>서울</span>
 									<a href="#">서울</a>
 									<a href="#">서울</a>
 									<a href="#">서울</a>
@@ -131,7 +130,7 @@
 									<a href="#">서울</a>
 									<a href="#">서울</a>
 									<a href="#">서울</a>
-									<a href="#">서울</a> -->
+									<a href="#">서울</a> 
 								</div>
 							</div>
 							<div class="box_option box_option2">
@@ -139,7 +138,6 @@
 									<h5>구선택</h5>
 								</div>
 								<div id="subMenu" class="area">
-									<!-- <span>서울</span>
 									<a href="#">서울</a>
 									<a href="#">서울</a>
 									<a href="#">서울</a>
@@ -151,7 +149,7 @@
 									<a href="#">서울</a>
 									<a href="#">서울</a>
 									<a href="#">서울</a>
-									<a href="#">서울</a> -->
+									<a href="#">서울</a> 
 								</div>
 							</div>
 						</div>
@@ -215,9 +213,11 @@
 							</td> -->
 						</tr>
 						<c:forEach var="Shopinfo" items="${Shopinfo}" varStatus="status">
+						<tr>
 							<td>${Shopinfo.SHOP_NAME}</td>
 							<td>${Shopinfo.PHONE}</td>
 							<td>${Shopinfo.ADDRESS}</td>
+							</tr>
 						</c:forEach>
 					</tbody>  
 				</table>

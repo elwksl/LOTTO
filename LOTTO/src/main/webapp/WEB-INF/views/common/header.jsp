@@ -17,6 +17,9 @@
 <link href="${path}/resources/css/style.css" rel="stylesheet"/>
 <link href="${path}/resources/css/SpoqaHanSans-kr.css" rel="stylesheet"/>    
 <link href="${path}/resources/css/jecss.css" rel="stylesheet"/>
+<link href="${path}/resources/css/contents.css" rel="stylesheet"/>
+
+
 <script type="text/javascript" src="${path}/resources/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="${path}/resources/js/jquery-ui.js"></script>
 <script type="text/javascript" src="${path}/resources/js/common.js" charset="utf-8"></script>            
@@ -378,7 +381,7 @@
 	            	</ul>
             	</div>
             </li>
-            <li class="basic gnb4"><a href="/store.do?method=sellerInfo645&wiselog=H_D_1_1">판매점</a>
+            <li class="basic gnb4"><a href="SHOPINFO">판매점</a>
             	<div class="group">
 	            	<ul>
 	            		<li><a href="/store.do?method=sellerInfo645&wiselog=H_D_1_1">구입처 안내</a>
