@@ -26,6 +26,17 @@
 		
 <div id="hm1" class="article_terms terms_home game_all active">
 	<h5>이용약관</h5>
+	<table>
+		<c:forEach items="${result}" var="ShopVO">
+         <tr>
+             <td>${ShopVO.SHOP_ID}</td>
+             <td>${ShopVO.SHOP_NAME}</td>
+             <td>${ShopVO.ADDRESS}</td>    
+         </tr>
+     </c:forEach>
+
+
+	</table>
 	<div class="terms_inner">
 		<h6>제1조(목적)</h6>
 		<p>이 약관은 기획재정부 복권위원회 지정 복권수탁사업자인 ㈜동행복권(이하 “회사”라 합니다)이 운영하는 사이트(이하 “사이트”)를 통해 제공하는 서비스와 이용자(이하 “회원”이라 합니다)의 권리, 의무 및 책임 사항을 규정하는 것을 목적으로 합니다.</p>

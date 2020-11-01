@@ -29,3 +29,4 @@
 	<beans:bean  id="ShopDto" class="dev.lotto.dto.ShopDtoImpl">
 	</beans:bean>
 </beans:beans>
+

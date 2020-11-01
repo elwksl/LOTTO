@@ -1,6 +1,6 @@
 package dev.lotto.dto;
 
-import java.util.List;
+import java.util.List; 
 
 import dev.lotto.vo.ShopVO;
 
