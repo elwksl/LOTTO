@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import dev.lotto.vo.ShopPrizeVO;
 import dev.lotto.vo.ShopVO;
 
 @Repository
@@ -20,4 +21,8 @@ public class ShopDtoImpl implements ShopDto{
 		return sqlSession.openSession().selectList("loto.mapper.parkMapper.shopinfo");
 	}
 
+	@Override
+	public List<ShopPrizeVO> shopprize() {
+		return sqlSession.openSession().selectList("loto.mapper.parkMapper.shopprize");
+	}
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import dev.lotto.service.ShopService;
+import dev.lotto.vo.ShopPrizeVO;
 import dev.lotto.vo.ShopVO;
 /**
  * Handles requests for the application home page.
@@ -35,5 +36,16 @@ public class ParkController {
 		model.addAttribute("Shopinfo", Shopinfo );
 		
 		return "park/shopinfo";
+	}
+	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@RequestMapping(value = "LOTTOPRIZE", method = RequestMethod.GET)
+	public String LOTTOPRIZE(HttpServletRequest req, Model model) {
+		List<ShopPrizeVO> shopprize = service.shopprize();
+		
+		model.addAttribute("shopprize", shopprize );
+		return "park/shopprize";
 	}
 }

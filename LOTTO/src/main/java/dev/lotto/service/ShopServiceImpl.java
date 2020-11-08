@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import dev.lotto.dto.ShopDtoImpl;
+import dev.lotto.vo.ShopPrizeVO;
 import dev.lotto.vo.ShopVO;
 
 
@@ -20,6 +21,13 @@ public class ShopServiceImpl implements ShopService{
 	public List<ShopVO> shopinfo() {
 		// TODO Auto-generated method stub
 		List<ShopVO> vo = shopDto.shopinfo();
+		return vo;
+	}
+
+	@Override
+	public List<ShopPrizeVO> shopprize() {
+		// TODO Auto-generated method stub
+		List<ShopPrizeVO> vo = shopDto.shopprize();
 		return vo;
 	}
 

@@ -16,8 +16,30 @@
 <script type="text/javascript" src="${path}/resources/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="${path}/resources/js/webfont.js"></script>   
 
-    
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
 
+function addressSearch(){
+	var valchk = "";
+	var obj= $("#sltSIDO option:selected").val();
+	var url = "http://api.vworld.kr/req/data?request=GetFeature&key=5CBB0F7C-F94D-3EAE-B459-486417D6D665&format=json&data=LT_C_ADSIGG_INFO&domain=5CBB0F7C-F94D-3EAE-B459-486417D6D665&attrfilter=full_nm:like:"+obj;
+	$.ajax({
+        type:"GET",
+        url:url,
+        dataType : "json",
+        success: function(data){   
+        	var ar = data.response.result.featureCollection.features;
+        	alert(ar[0].properties.sig_kor_nm);  
+        	 for(var i=0; i<ar.length; i++){
+        		alert(ar[i].properties.sig_kor_nm);
+        	} 
+        },
+        error: function (request, status, error){     
+        }
+    })
+}
+
+</script>
 </head>
 <%@ include file="/WEB-INF/views/common/header.jsp" %> 
 <body >
@@ -30,17 +52,17 @@
 				<div id="snb" class="lnb">
 					<h2 id="04" class="lnb_title">판매점</h2>
 					<ul id="lnb" class="lnb_dep1">
-						<li id="04-01"><a href="SHOPINFO" class="menuLnb"><span>구입처 안내</span></a>
+						<li id="04-01"><a href="SHOPINFO" class="menuLnb"><span>구입처 안내</a>
 							<ul class="lnb_dep2">
-								<li id="04-01-01"><a href="SHOPINFO"><span> 로또6/45판매점 조회</span></a></li>
+								<li id="04-01-01"><a href="SHOPINFO"><span> 로또6/45판매점 조회</a></li>
 							</ul>
 						</li>
-						<li id="04-02"><a href="/store.do?method=topStore&pageGubun=L645" class="menuLnb"><span>당첨 판매점</span></a>
+						<li id="04-02"><a href="LOTTOPRIZE" class="menuLnb"><span>당첨 판매점</a>
 							<ul class="lnb_dep2">
-								<li id="04-02-01"><a href="/store.do?method=topStore&pageGubun=L645"><span> 회차별</span></a></li>
+								<li id="04-02-01"><a href="LOTTOPRIZE"><span> 회차별</a></li>
 								<!-- 
-								<li id="04-02-02"><a href="/store.do?method=topStoreRank&rank=1&pageGubun=L645"><span> 1등 배출점</span></a></li>
-								<li id="04-02-03"><a href="/store.do?method=topStoreRank&rank=2&pageGubun=L645"><span> 2등 배출점</span></a></li>
+								<li id="04-02-02"><a href="/store.do?method=topStoreRank&rank=1&pageGubun=L645"><span> 1등 배출점</a></li>
+								<li id="04-02-03"><a href="/store.do?method=topStoreRank&rank=2&pageGubun=L645"><span> 2등 배출점</a></li>
 								-->
 							</ul>
 						</li>
@@ -51,7 +73,7 @@
 			<!-- PC 컨텐츠 영역 -->
 			<div id="article" class="contentsArticle">
 				<div class="header_article">
-					<h3 class="sub_title"></h3>
+					<h3 class="sub_title">로또 6/45 판매점 조회</h3>
 					<p class="location"></p>
 				</div>
 				<div>
@@ -63,28 +85,29 @@
 									<form id="frmSrch1" name="frmSrch1" method="post">
 										<input type="hidden" name="searchType" value="1">
 										<input type="hidden" id="nowPage1" name="nowPage">
-										<select id="sltSIDO" name="sltSIDO" title="시/도 선택">
+										<select id="sltSIDO" name="sltSIDO" title="시/도 선택" onchange="addressSearch();">
 											<option value="">시/도 선택</option>
-											<option value="경기" >경기</option>
-											<option value="인천" >인천</option>
-											<option value="강원" >강원</option>
-											<option value="충북" >충북</option>
-											<option value="충남" >충남</option>
-											<option value="경북" >경북</option>
-											<option value="경남" >경남</option>
-											<option value="울산" >울산</option>
-											<option value="전북" >전북</option>
-											<option value="전남" >전남</option>
-											<option value="제주" >제주</option>
-											<option value="서울" >서울</option>
-											<option value="대전" >대전</option>
-											<option value="대구" >대구</option>
-											<option value="부산" >부산</option>
-											<option value="광주" >광주</option>
-											<option value="세종" >세종</option>
+											<option value="경기도" >경기</option>
+											<option value="인천광역시" >인천</option>
+											<option value="강원도" >강원</option>
+											<option value="충청북도" >충북</option>
+											<option value="충청남도" >충남</option>
+											<option value="경상북도" >경북</option>
+											<option value="경상남도" >경남</option>
+											<option value="울산광역시" >울산</option>
+											<option value="전라북도" >전북</option>
+											<option value="전라남도" >전남</option>
+											<option value="제주특별자치도" >제주</option>
+											<option value="서울특별시" >서울</option>
+											<option value="대전광역시" >대전</option>
+											<option value="대구광역시" >대구</option>
+											<option value="부산광역시" >부산</option>
+											<option value="광주광역시" >광주</option>
+											<option value="세종특별자치시" >세종</option>
 										</select>
 										<select name="sltGUGUN" id="sltGUGUN" title="구/군 선택">
-											<option value="">구/군를 선택해 주세요.</option>
+											<div id="addressGu"><option value="">구/군를 선택해 주세요.</option></div>
+											
 										</select>
 										<a class="btn_common form blu" href="#none" id="searchBtn1">조회</a>
 									</form>
@@ -119,18 +142,23 @@
 									<h5>지역 선택</h5>
 								</div>
 								<div id="mainMenuArea" class="area">
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a> 
+									<a href="#" onclick="addressSearch('경기도')">경기</a>
+									<a href="#" onclick="addressSearch('인천광역시')">인천</a>
+									<a href="#" onclick="addressSearch('강원도')">강원</a>
+									<a href="#" onclick="addressSearch('충청북도')">충북</a>
+									<a href="#" onclick="addressSearch('충청남도')"> 충남</a>
+									<a href="#" onclick="addressSearch('경상북도')">경북</a>
+									<a href="#" onclick="addressSearch('경상남도')">경남</a>
+									<a href="#" onclick="addressSearch('울산광역시')">울산</a>
+									<a href="#" onclick="addressSearch('전라남도')">전남</a>
+									<a href="#" onclick="addressSearch('전라북도')">전북</a>
+									<a href="#" onclick="addressSearch('제주특별자치도')">제주</a>
+									<a href="#" onclick="addressSearch('서울특별시')">서울</a> 
+									<a href="#" onclick="addressSearch('대전광역시')">대전</a> 
+									<a href="#" onclick="addressSearch('대구광역시')">대구</a> 
+									<a href="#" onclick="addressSearch('부산광역시')">부산</a> 
+									<a href="#" onclick="addressSearch('광주광역시')">광주</a> 
+									<a href="#" onclick="addressSearch('세종특별자치시')">세종</a> 
 								</div>
 							</div>
 							<div class="box_option box_option2">
@@ -138,25 +166,14 @@
 									<h5>구선택</h5>
 								</div>
 								<div id="subMenu" class="area">
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a> 
+									<div id="addressGu2"><a href="#">서울</a></div>
 								</div>
 							</div>
 						</div>
 						
 						<div class="group_content group_data_search">
 							<div class="group_title">
-							    <h4 class="title">검색결과 : <span class="color_key3" id="searchResult"></span></h4>
+							    <h4 class="title">검색결과 : <span class="color_key3" id="searchResult"></h4>
 							    <div class="action">
 							    	<div class="search">
 							    		<form id="frmSrch4" name="frmSrch4" method="post">

@@ -13,7 +13,6 @@
 <link href="${path}/resources/css/al720.css" rel="stylesheet"/> 
 <link href="${path}/resources/css/common.css" rel="stylesheet"/>
 <link href="${path}/resources/css/main.css" rel="stylesheet"/>
-<link href="${path}/resources/css/reset.css" rel="stylesheet"/>
 <link href="${path}/resources/css/style.css" rel="stylesheet"/>
 <link href="${path}/resources/css/SpoqaHanSans-kr.css" rel="stylesheet"/>    
 <link href="${path}/resources/css/jecss.css" rel="stylesheet"/>
