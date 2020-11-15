@@ -31,4 +31,12 @@ public class ShopServiceImpl implements ShopService{
 		return vo;
 	}
 
+	@Override
+	public List<ShopVO> shopsearchinfo(String adr) {
+		// TODO Auto-generated method stub
+		
+		List<ShopVO> vo = shopDto.shopsearchinfo(adr);
+		return vo;
+	}
+
 }

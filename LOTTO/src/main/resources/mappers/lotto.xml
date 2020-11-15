@@ -17,4 +17,10 @@
   FROM TB_DANGCHUM_HISTORY
  </select>
  
+  <select id="shopsearchinfo" parameterType="String" resultType="dev.lotto.vo.ShopVO">
+  SELECT *
+  FROM TB_LOTTO_SHOP
+  WHERE address LIKE '%' || #{adr} ||'%'
+ </select>
+ 
 </mapper> 
