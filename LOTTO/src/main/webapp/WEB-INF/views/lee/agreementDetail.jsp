@@ -27,6 +27,9 @@
 <div id="hm1" class="article_terms terms_home game_all active">
 	<h5>이용약관</h5>
 	<table>
+	   <tr>
+	      <th>Test</th>
+	   </tr>
 		<c:forEach items="${result}" var="ShopVO">
          <tr>
              <td>${ShopVO.SHOP_ID}</td>

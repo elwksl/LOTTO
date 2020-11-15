@@ -32,60 +32,33 @@ public class LeeController {
 	// 복권정보 클릭 -> 1번째 페이지 로또6/45 소개로 이동
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String lotto_info(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate);
 
 		return "common/index";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	
 
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate);
-
-		return "login";
+		return "common/login";
 	}
 
-	@RequestMapping(value = "/main", method = RequestMethod.GET)
-	public String main(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
 
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate);
-
-		return "index";
-	}
 
 	@RequestMapping(value = "/createUser", method = RequestMethod.GET)
 	public String createUser(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	
 
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate);
-
-		return "join";
+		return "lee/join";
 	}
 
+	@RequestMapping(value = "/joinForm", method = RequestMethod.GET)
+	public String joinForm(Locale locale, Model model) {
+	
+
+		return "lee/joinForm";
+	}
+	
 	@RequestMapping(value = "/agDetail", method = RequestMethod.GET)
 	public ModelAndView agreement(Model model) {
 		ModelAndView result = new ModelAndView();

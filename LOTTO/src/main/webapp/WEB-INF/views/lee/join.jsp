@@ -2868,7 +2868,7 @@
     				}
     		} 
     		if(chk) {	
-    			window.open("https://pcc.siren24.com/pcc_V3/passWeb/pcc_V3_j10.jsp" );
+    			window.open("joinForm" );
     			return false;
     			} else { 
     				alert("모든 약관에 동의해 주세요.") }
