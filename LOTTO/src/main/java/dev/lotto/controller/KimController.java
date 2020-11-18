@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -23,8 +25,8 @@ public class KimController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "TOTALGAME", method = RequestMethod.GET)
-	public String process(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String totalgame(HttpServletRequest req, Model model) {
+		logger.info("Welcome home! The client locale is {}.", req);
 		
 		/*
 		 * Date date = new Date(); DateFormat dateFormat =
