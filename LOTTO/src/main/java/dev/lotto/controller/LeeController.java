@@ -4,7 +4,9 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import dev.lotto.dto.ShopDtoImpl;
+import dev.lotto.dto.lottoDAO;
 import dev.lotto.service.ShopService;
 import dev.lotto.service.ShopServiceImpl;
 import dev.lotto.vo.ShopVO;
@@ -25,47 +28,48 @@ import dev.lotto.vo.ShopVO;
 @Controller
 public class LeeController {
 
-	@Autowired
+	private ShopServiceImpl ShopServiceImpl;
 	private ShopDtoImpl ShopDtoImpl;
 	private static final Logger logger = LoggerFactory.getLogger(LeeController.class);
 
 	// 복권정보 클릭 -> 1번째 페이지 로또6/45 소개로 이동
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	@RequestMapping(value = "/index")
 	public String lotto_info(Locale locale, Model model) {
 
 		return "common/index";
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login(Locale locale, Model model) {
-	
+	@RequestMapping(value = "/login")
+	public ModelAndView login(@Param(value = "common/login") Map<String, Object> pMap) {
+		ModelAndView mv = new ModelAndView();
 
-		return "common/login";
+		return mv;
 	}
 
-
-
-	@RequestMapping(value = "/createUser", method = RequestMethod.GET)
+	@RequestMapping(value = "/createUser")
 	public String createUser(Locale locale, Model model) {
-	
 
 		return "lee/join";
 	}
 
-	@RequestMapping(value = "/joinForm", method = RequestMethod.GET)
+	@RequestMapping(value = "/joinForm")
 	public String joinForm(Locale locale, Model model) {
-	
 
 		return "lee/joinForm";
 	}
-	
-	@RequestMapping(value = "/agDetail", method = RequestMethod.GET)
+
+	@RequestMapping(value = "/agDetail")
 	public ModelAndView agreement(Model model) {
 		ModelAndView result = new ModelAndView();
-		List<ShopVO> shopList = ShopDtoImpl.shopinfo();
+
+		Map<String, Object> map;
+		List<ShopVO> shopList = ShopServiceImpl.shopinfo(pMap);
+		map.put(shopList, shopList);
 		logger.info(shopList.toString());
-		result.addObject("result", shopList);
-		result.setViewName("agreementDetail");
+		
+		result.setViewName("lee/agreementDetail");
+
+		
 		return result;
 	}
 
