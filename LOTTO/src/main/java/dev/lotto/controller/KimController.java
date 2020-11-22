@@ -24,10 +24,9 @@ public class KimController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "TOTALGAME", method = RequestMethod.GET)
-	public String totalgame(HttpServletRequest req, Model model) {
-		logger.info("Welcome home! The client locale is {}.", req);
-		
+	@RequestMapping(value = "lotto645", method = RequestMethod.GET)
+	public String lotto645(HttpServletRequest req, Model model) {
+		logger.info("로또구매페이지.", req);
 		/*
 		 * Date date = new Date(); DateFormat dateFormat =
 		 * DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
@@ -36,22 +35,14 @@ public class KimController {
 		 * 
 		 * model.addAttribute("serverTime", formattedDate );
 		 */
-		
-		return "kim/TotalGame";
+		return "kim/lotto645";
 	}
 	
-	/*
-	 * @RequestMapping(value = "/procei", method = RequestMethod.GET) public String
-	 * procei(Locale locale, Model model) {
-	 * logger.info("Welcome home! The client locale is {}.", locale);
-	 * 
-	 * Date date = new Date(); DateFormat dateFormat =
-	 * DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-	 * 
-	 * String formattedDate = dateFormat.format(date);
-	 * 
-	 * model.addAttribute("serverTime", formattedDate );
-	 * 
-	 * return "park/processi"; }
-	 */
+	@RequestMapping(value = "execBuy", method = RequestMethod.GET)
+	public String execBuy(HttpServletRequest req, Model model) {
+		logger.info("로또구매 ajax.", req);
+		
+		return "kim/lotto645";
+	}
+
 }

@@ -9,12 +9,13 @@
 <html lang="ko"><head>
     <meta charset="EUC-KR">
     <title></title>
+ <c:set var="path" value="${pageContext.request.contextPath}"/>   
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <link href='${path}/resources/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="${path}/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="${path}/resources/css/style.css?version=1.1">
 
-<link href="${path}/resources/js/jquery-ui.css" rel="stylesheet">
+<link href="${path}/resources/css/jquery-ui.css" rel="stylesheet">
 <script src="${path}/resources/js/jquery.js"></script>
 <script src="${path}/resources/js/jquery-ui.min.js"></script>
 <script src="${path}/resources/js/common.js"></script>
@@ -1428,7 +1429,7 @@ if (navigator.platform && /win16|win32|win64|mac/ig.test(navigator.platform) == 
 			};
 			
 			$.ajax({
-				url: "/olotto/game/execBuy.do",
+				url: "execBuy",		//"/olotto/game/execBuy.do",
 				type: "POST",
 				dataType:"json",     //이부분이 중요 데이타타입을 jsonP로 해줘야 크로스도메인을 이용할수 있다.
 				data: params,
