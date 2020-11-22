@@ -39,4 +39,10 @@ public class ShopServiceImpl implements ShopService{
 		return vo;
 	}
 
+	@Override
+	public List<ShopPrizeVO> Dangsearchinfo(String adr) {
+		List<ShopPrizeVO> vo = shopDto.Dangsearchinfo(adr);
+		return vo;
+	}
+
 }

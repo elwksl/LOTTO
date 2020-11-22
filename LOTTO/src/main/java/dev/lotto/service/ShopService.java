@@ -13,4 +13,6 @@ public interface ShopService {
 	public List<ShopPrizeVO> shopprize();
 	
 	public List<ShopVO> shopsearchinfo(String adr);
+	
+	public List<ShopPrizeVO> Dangsearchinfo(String adr);
 }
