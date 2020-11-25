@@ -1,6 +1,10 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<%@ page contentType="text/html; charset=UTF-8" %> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" session="false"%>
+<% request.setCharacterEncoding("utf-8"); %>
+<% response.setContentType("text/html; charset=utf-8"); %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +20,181 @@
 <script type="text/javascript" src="${path}/resources/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="${path}/resources/js/webfont.js"></script>   
 
-    
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
 
+$(document).ready(function(){
+ 	
+	 addressSearch2();
+	 addressSearch('서울');
+});
+
+
+
+function addressSearch2(){
+	var valchk = '<select name="adre2" id="adre2" title="구/군 선택">';  
+	var obj= $("#adre option:selected").val();
+	if(obj==''){
+		$("#adre").val("서울").attr("selected","selected");
+		obj='서울';
+	}
+	var url2 = "http://api.vworld.kr/req/data";
+	
+		$.ajax({
+	        type:"post",
+	        data:{
+	        	size:'100',
+	        	request:'GetFeature',
+	        	key:'5CBB0F7C-F94D-3EAE-B459-486417D6D665',
+	        	data:'LT_C_ADSIGG_INFO',
+	        	domain:'5CBB0F7C-F94D-3EAE-B459-486417D6D665',
+	        	attrfilter:'full_nm:like:'+obj,
+	        },
+	        url: url2,
+	        dataType : "json",
+	        async:false,
+	        contentType: "application/x-www-form-urlencoded; charset=utf8",   
+	        success: function(data){   
+	        	if(obj != '세종'){
+		        	 var ar = data.response.result.featureCollection.features;
+		        	 for(var i=0; i<ar.length; i++){
+		        		 valchk+= '<option value="'+ar[i].properties.sig_kor_nm+'">'+ar[i].properties.sig_kor_nm+'</option>';
+		        	 }  
+	        	 } else {
+	        		 valchk += '<option value="">구/군를 선택해 주세요.</option>';
+	        		 valchk += '<option value="세종">세종</option>';
+	        	 }
+	        	 $("#addressGu").empty();
+	    		 valchk =valchk+"</select>";
+	    		 $("#addressGu").html(valchk); 
+	        },
+	        error: function (request, status, error){
+	        	alert(status+error+request);    
+	        }
+	    });
+	
+}
+
+function searchAddresspark1(){
+	var obj = $("#searchAddresspark1").val();
+	var SearchForm='';
+	$.ajax({
+        type:"post",
+        data:{ adr : obj
+        },
+        url: "ShopSearch", 
+        dataType : "json",
+        async:false,
+        contentType: "application/x-www-form-urlencoded; charset=utf8",   
+        success: function(data){   
+	        	 for(var i=0; i<data.length; i++){
+	        		 SearchForm +='<tr><td>'+data[i].shop_NAME+'</td><td>'+data[i].phone+'</td><td>'+data[i].address+'</td></tr>';
+	        	 }  
+        	 $("#tbodySearchForm").empty();
+        	 $("#tbodySearchForm").html(SearchForm);  
+        },
+        error: function (request, status, error){
+        	alert(status+error+request);    
+        }
+    });   
+}
+
+
+function searchBtn2(searchadr){
+	var SearchForm='';
+	var obj= searchadr;
+	
+	$.ajax({
+        type:"post",
+        data:{ adr : obj
+        },
+        url: "ShopSearch", 
+        dataType : "json",
+        async:false,
+        contentType: "application/x-www-form-urlencoded; charset=utf8",   
+        success: function(data){   
+	        	 for(var i=0; i<data.length; i++){
+	        		 SearchForm +='<tr><td>'+data[i].shop_NAME+'</td><td>'+data[i].phone+'</td><td>'+data[i].address+'</td></tr>';
+	        	 }  
+        	 $("#tbodySearchForm").empty();
+        	 $("#tbodySearchForm").html(SearchForm);  
+        },
+        error: function (request, status, error){
+        	alert(status+error+request);    
+        }
+    });  
+}
+
+
+function addressSearch(s){
+	var valchk = '';
+	var url2 = "http://api.vworld.kr/req/data";
+	
+	 $.ajax({
+        type:"post",
+        data:{
+        	size:'100',
+        	request:'GetFeature',
+        	key:'5CBB0F7C-F94D-3EAE-B459-486417D6D665',
+        	data:'LT_C_ADSIGG_INFO',
+        	domain:'5CBB0F7C-F94D-3EAE-B459-486417D6D665',
+        	attrfilter:'full_nm:like:'+s,
+        },
+        url: url2,
+        dataType : "json",
+        async:false,
+        contentType: "application/x-www-form-urlencoded; charset=utf8",   
+        success: function(data){   
+        	  if(s != '세종'){
+	        	 var ar = data.response.result.featureCollection.features;
+	        	 for(var i=0; i<ar.length; i++){
+	        		 valchk += '<a onclick="searchBtn2(';   
+	        		 valchk += "'"+ar[i].properties.sig_kor_nm+"'";
+	        		 valchk += ');" href="#">';  
+	        	     valchk += ar[i].properties.sig_kor_nm;
+	        	     valchk += '</a></label>';
+	        	 }  
+        	 }else {
+        		 valchk += '<a href="#">세종</a>';
+        	 }   
+        	 $("#addressGu2").empty();
+    		 $("#addressGu2").html(valchk);  
+        },
+        error: function (request, status, error){
+        	alert(status+error+request);    
+        }
+    });   
+}
+
+var ff = '';
+
+function searchBtn1(ff){ 
+	var SearchForm='';
+	var obj= $("#adre2 option:selected").val();
+	
+	$.ajax({
+        type:"post",
+        data:{ adr : obj
+        },
+        url: "ShopSearch", 
+        dataType : "json",
+        async:false,
+        contentType: "application/x-www-form-urlencoded; charset=utf8",   
+        success: function(data){   
+	        	 for(var i=0; i<data.length; i++){
+	        		 SearchForm +='<tr><td>'+data[i].shop_NAME+'</td><td>'+data[i].phone+'</td><td>'+data[i].address+'</td></tr>';
+	        	 }  
+        	 $("#tbodySearchForm").empty();
+        	 $("#tbodySearchForm").html(SearchForm);  
+        },
+        error: function (request, status, error){
+        	alert(status+error+request);    
+        }
+    });   
+} 
+ 
+ 
+</script>
 </head>
 <%@ include file="/WEB-INF/views/common/header.jsp" %> 
 <body >
@@ -30,17 +207,17 @@
 				<div id="snb" class="lnb">
 					<h2 id="04" class="lnb_title">판매점</h2>
 					<ul id="lnb" class="lnb_dep1">
-						<li id="04-01"><a href="SHOPINFO" class="menuLnb"><span>구입처 안내</span></a>
+						<li id="04-01"><a href="SHOPINFO" class="menuLnb"><span>구입처 안내</a>
 							<ul class="lnb_dep2">
-								<li id="04-01-01"><a href="SHOPINFO"><span> 로또6/45판매점 조회</span></a></li>
+								<li id="04-01-01"><a href="SHOPINFO"><span> 로또6/45판매점 조회</a></li>
 							</ul>
 						</li>
-						<li id="04-02"><a href="/store.do?method=topStore&pageGubun=L645" class="menuLnb"><span>당첨 판매점</span></a>
+						<li id="04-02"><a href="LOTTOPRIZE" class="menuLnb"><span>당첨 판매점</a>
 							<ul class="lnb_dep2">
-								<li id="04-02-01"><a href="/store.do?method=topStore&pageGubun=L645"><span> 회차별</span></a></li>
+								<li id="04-02-01"><a href="LOTTOPRIZE"><span> 회차별</a></li>
 								<!-- 
-								<li id="04-02-02"><a href="/store.do?method=topStoreRank&rank=1&pageGubun=L645"><span> 1등 배출점</span></a></li>
-								<li id="04-02-03"><a href="/store.do?method=topStoreRank&rank=2&pageGubun=L645"><span> 2등 배출점</span></a></li>
+								<li id="04-02-02"><a href="/store.do?method=topStoreRank&rank=1&pageGubun=L645"><span> 1등 배출점</a></li>
+								<li id="04-02-03"><a href="/store.do?method=topStoreRank&rank=2&pageGubun=L645"><span> 2등 배출점</a></li>
 								-->
 							</ul>
 						</li>
@@ -51,7 +228,7 @@
 			<!-- PC 컨텐츠 영역 -->
 			<div id="article" class="contentsArticle">
 				<div class="header_article">
-					<h3 class="sub_title"></h3>
+					<h3 class="sub_title">로또 6/45 판매점 조회</h3>
 					<p class="location"></p>
 				</div>
 				<div>
@@ -63,18 +240,18 @@
 									<form id="frmSrch1" name="frmSrch1" method="post">
 										<input type="hidden" name="searchType" value="1">
 										<input type="hidden" id="nowPage1" name="nowPage">
-										<select id="sltSIDO" name="sltSIDO" title="시/도 선택">
+										<select id="adre" name="adre" title="시/도 선택" onchange="addressSearch2();">
 											<option value="">시/도 선택</option>
 											<option value="경기" >경기</option>
 											<option value="인천" >인천</option>
 											<option value="강원" >강원</option>
-											<option value="충북" >충북</option>
-											<option value="충남" >충남</option>
-											<option value="경북" >경북</option>
-											<option value="경남" >경남</option>
+											<option value="충청" >충북</option>
+											<option value="충청" >충남</option>
+											<option value="경상" >경북</option>
+											<option value="경상" >경남</option>
 											<option value="울산" >울산</option>
-											<option value="전북" >전북</option>
-											<option value="전남" >전남</option>
+											<option value="전라" >전북</option>
+											<option value="전라" >전남</option>
 											<option value="제주" >제주</option>
 											<option value="서울" >서울</option>
 											<option value="대전" >대전</option>
@@ -83,25 +260,26 @@
 											<option value="광주" >광주</option>
 											<option value="세종" >세종</option>
 										</select>
-										<select name="sltGUGUN" id="sltGUGUN" title="구/군 선택">
-											<option value="">구/군를 선택해 주세요.</option>
-										</select>
-										<a class="btn_common form blu" href="#none" id="searchBtn1">조회</a>
+										<div id="addressGu">
+											<select name="adre2" id="adre2" title="구/군 선택">
+												<option value="">구/군를 선택해 주세요.</option>
+											</select>
+										</div>
+										<a class="btn_common form blu" href="#none" id="searchBtn1" onclick="searchBtn1();">조회</a>
 									</form>
 								</div>
 							</div>
 							<div class="box_option box_option2">
-								<h4><strong>상호/지역(읍/면/동)</strong>으로 검색</h4>
+								<h4><strong>검색어</strong>로 검색</h4>
 								<div class="forms">
 									<form id="frmSrch2" name="frmSrch2" method="post" onsubmit="false">
 										<input type="hidden" name="searchType" value="2">
 										<input type="hidden" id="nowPage2" name="nowPage">
 										<select id="kind" name="kind" title="상호/지역(읍/면/동) 선택">
-											<option value="0" >상호</option>
-											<option value="1" >지역(읍/면/동)</option>
+											<option value="0" >주소</option>
 										</select>
-										<input type="text" name="srchVal" id="srchVal" maxlength="20" value="" onkeydown="return $.enterCheck(event.keyCode);" onchange="clearSlt()" title="상호/지역(읍/면/동) 입력">
-										<a class="btn_common form blu" href="#none" id="searchBtn2">조회</a>
+										<input type="text" name="srchVal" id="searchAddresspark1" maxlength="20" value="">
+										<a class="btn_common form blu" href="#none" id="searchAdr1" onclick="searchAddresspark1();">조회</a>
 									</form>
 								</div>
 							</div>
@@ -118,20 +296,24 @@
 									<h4><strong>행정구역</strong>으로 검색</h4>
 									<h5>지역 선택</h5>
 								</div>
-								<div id="mainMenuArea" class="area">
-									<!-- <span>서울</span>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a> -->
+								<div id="mainaddres" class="area">
+									<a href="#none" onclick="addressSearch('경기');">경기</a>  
+									<a href="#" onclick="addressSearch('인천');">인천</a>
+									<a href="#" onclick="addressSearch('강원');">강원</a>
+									<a href="#" onclick="addressSearch('충청');">충북</a>
+									<a href="#" onclick="addressSearch('충청');">충남</a>
+									<a href="#" onclick="addressSearch('경상');">경북</a>
+									<a href="#" onclick="addressSearch('경상');">경남</a>
+									<a href="#" onclick="addressSearch('울산');">울산</a>
+									<a href="#" onclick="addressSearch('전라');">전남</a>
+									<a href="#" onclick="addressSearch('전라');">전북</a>
+									<a href="#" onclick="addressSearch('제주');">제주</a>
+									<a href="#" onclick="addressSearch('서울');">서울</a> 
+									<a href="#" onclick="addressSearch('대전');">대전</a> 
+									<a href="#" onclick="addressSearch('대구');">대구</a> 
+									<a href="#" onclick="addressSearch('부산');">부산</a> 
+									<a href="#" onclick="addressSearch('광주');">광주</a> 
+									<a href="#" onclick="addressSearch('세종');">세종</a> 
 								</div>
 							</div>
 							<div class="box_option box_option2">
@@ -139,55 +321,25 @@
 									<h5>구선택</h5>
 								</div>
 								<div id="subMenu" class="area">
-									<!-- <span>서울</span>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a>
-									<a href="#">서울</a> -->
+									<div id="addressGu2">
+									   <a href="#">서울</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						
 						<div class="group_content group_data_search">
-							<div class="group_title">
-							    <h4 class="title">검색결과 : <span class="color_key3" id="searchResult"></span></h4>
-							    <div class="action">
-							    	<div class="search">
-							    		<form id="frmSrch4" name="frmSrch4" method="post">
-										<input type="hidden" name="searchType" value="4">
-										<input type="hidden" id="nowPage4" name="nowPage">
-										<select id="rtlrSttus" name="rtlrSttus" title="조회옵션 선택">
-											<option value="">전체</option>
-											<option value="001" >판매점</option>
-											<option value="002" >폐점</option>
-										</select>
-										<a id="searchBtn3" class="btn_common form blu" href="#">조회</a>
-										</form>
-									</div>
-									<!-- <div class="btn"><a id="exceldw" class="btn_common form" href="#">엑셀다운로드</a></div> -->
-							    </div>
-							</div>
+							
 						</div>
 						<table class="tbl_data tbl_data_col" id="resultTable">
 						</table>
-						<p class="note_result_search bottom"><img src="/images/common/ico_closed_store.png" alt="폐점"> 폐점된 판매점입니다.</p>
 						<div class="paginate_common" id="pagingView"></div>
-
-
 		    		</div>
 				</div>
 			</div>
 		</section>
 		<section class="contentSection">
-			<div id="article" class="contentsArticle">
+			<div id="articleSearchForm" class="contentsArticle">
 				<table class="tbl_data tbl_data_col" id="resultTable">
 					<caption>상호명, 전화번호, 소재지, 위치 등 로또6/45 판매점 조회 결과</caption>
 					<colgroup>
@@ -204,7 +356,7 @@
 						<!-- 	<th scope="col">위치보기</th> -->
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="tbodySearchForm">
 						<tr>
 							<td class="ta_left">바이복</td>
 							<td>02-445-5597   </td>
@@ -215,9 +367,11 @@
 							</td> -->
 						</tr>
 						<c:forEach var="Shopinfo" items="${Shopinfo}" varStatus="status">
+						<tr>
 							<td>${Shopinfo.SHOP_NAME}</td>
 							<td>${Shopinfo.PHONE}</td>
 							<td>${Shopinfo.ADDRESS}</td>
+						</tr>
 						</c:forEach>
 					</tbody>  
 				</table>

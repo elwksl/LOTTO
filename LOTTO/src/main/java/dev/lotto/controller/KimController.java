@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -22,31 +24,25 @@ public class KimController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/process", method = RequestMethod.GET)
-	public String process(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "park/process";
+	@RequestMapping(value = "lotto645", method = RequestMethod.GET)
+	public String lotto645(HttpServletRequest req, Model model) {
+		logger.info("로또구매페이지.", req);
+		/*
+		 * Date date = new Date(); DateFormat dateFormat =
+		 * DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		 * 
+		 * String formattedDate = dateFormat.format(date);
+		 * 
+		 * model.addAttribute("serverTime", formattedDate );
+		 */
+		return "kim/lotto645";
 	}
 	
-	@RequestMapping(value = "/procei", method = RequestMethod.GET)
-	public String procei(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	@RequestMapping(value = "execBuy", method = RequestMethod.GET)
+	public String execBuy(HttpServletRequest req, Model model) {
+		logger.info("로또구매 ajax.", req);
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "park/processi";
+		return "kim/lotto645";
 	}
+
 }

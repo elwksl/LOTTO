@@ -60,7 +60,6 @@ p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, div, form, fieldset, legend, 
 table, th, td {margin:0; padding:0}
 input, textarea, select, button, table, pre {font-family:'Noto Sans KR','맑은고딕','Malgun Gothic','돋움', Dotum, sans-serif; font-size:14px; color:#333}
 input, textarea, select, button {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box}
-a, p, span, strong, em, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, div {line-height:1em}
 h1, h2, h3, h4, h5, h6, strong {color:#1d1d1d}
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display:block; margin:0; padding:0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box; }
 img, fieldset {border:0; vertical-align:middle}
@@ -83,7 +82,7 @@ input[type="radio"],
 input[type="checkbox"] {display:inline-block; width:20px; height:20px}
 input[type="radio"] + label,
 input[type="checkbox"] + label {display:inline-block; vertical-align:middle; height:20px; line-height:19px; padding-left:8px; margin-right:16px}
-select {display:inline-block; height:34px; line-height:31px; /*padding:0 9px;*/ padding:0 22px 0 6px; border:1px solid #ddd; box-sizing:border-box; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none; -ms-appearance:none; appearance:none; border-radius:0; background:#fff url(/images/common/bg_select.gif) 100% 50% no-repeat}
+select {display:inline-block; height:34px; line-height:31px; /*padding:0 9px;*/ padding:0 22px 0 6px; border:1px solid #ddd; box-sizing:border-box; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none; -ms-appearance:none; appearance:none; border-radius:0; background:#fff url(../img/bg_select.gif) 100% 50% no-repeat}
 select::-ms-expand {display:none}
 input[type="text"] + .ui-datepicker-trigger {vertical-align:middle; margin-left:-1px}
 input.hasDatepicker {width:90px}

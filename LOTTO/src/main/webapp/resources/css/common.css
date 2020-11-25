@@ -16,7 +16,7 @@
 .wrap_input_check {display:inline-block; white-space:nowrap}
 
 /* button type */
-.link_common {display:inline-block; padding-right:14px; font-size:13px; font-weight:300; color:#007bc3; vertical-align:middle; background:url(/images/common/ico-link-gt.gif) 100% 50% no-repeat}
+.link_common {display:inline-block; padding-right:14px; font-size:13px; font-weight:300; color:#007bc3; vertical-align:middle; background:url(../img/ico-link-gt.gif) 100% 50% no-repeat}
 .btn_common {display:inline-block; box-sizing:border-box; color:#333; font-weight:500; text-align:center; border:1px solid #ddd; background:#f5f5f5; vertical-align:middle; cursor:pointer}
 .btn_common.sml {min-width:45px; height:25px; line-height:22px; padding:0 9px; font-size:13px; font-weight:300; background:#707070; border-color:#707070; color:#fff}
 .btn_common.form {height:34px; line-height:31px; padding:0 9px; font-size:13px; font-weight:300; background:#767676; border-color:#767676; color:#fff}
@@ -26,8 +26,8 @@
 .btn_common.blu {background:#007bc3; border-color:#007bc3; color:#fff}
 .btn_common.gblu {background:#0a857e; border-color:#0a857e; color:#fff}
 .btn_common.pik {background:#ff667a; border-color:#ff667a; color:#fff}
-.btn_search {display:inline-block; padding:0; width:20px; height:19px; text-align:left; text-indent:-999em; overflow:hidden; background:url(/images/common/ico_search_btn.png) 50% 50% no-repeat; vertical-align:middle}
-.btn_attach {display:inline-block; padding:0; width:21px; height:19px; text-align:left; text-indent:-999em; overflow:hidden; background:url(/images/common/ico_attach_btn.png) 50% 50% no-repeat; vertical-align:middle}
+.btn_search {display:inline-block; padding:0; width:20px; height:19px; text-align:left; text-indent:-999em; overflow:hidden; background:url(../img/ico_search_btn.png) 50% 50% no-repeat; vertical-align:middle}
+.btn_attach {display:inline-block; padding:0; width:21px; height:19px; text-align:left; text-indent:-999em; overflow:hidden; background:url(../img/ico_attach_btn.png) 50% 50% no-repeat; vertical-align:middle}
 .btns_submit {padding-top:40px; margin-top:40px; border-top:1px solid #eee; text-align:center}
 .btns_submit .btn_common {width:180px; padding:0 0 0 0}
 .btns_submit .btn_common ~ .btn_common {margin-left:6px}
@@ -202,11 +202,11 @@
 .paginate_common a {display:inline-block; padding:0 10px; height:32px; line-height:31px; font-size:15px; font-weight:300; vertical-align:middle}
 .paginate_common a strong {font-weight:500; color:#007bc3}
 .paginate_common .go {padding:0; width:24px; text-align:left; text-indent:-999em; overflow:hidden; background-position:50% 50%; background-repeat:no-repeat}
-.paginate_common .go.first {background-image:url(/images/common/btn-paging-first.png)}
-.paginate_common .go.prev {margin-right:12px; background-image:url(/images/common/btn-paging-prev.png)}
-.paginate_common .go.next {margin-left:12px;background-image:url(/images/common/btn-paging-next.png)}
-.paginate_common .go.end {background-image:url(/images/common/btn-paging-end.png)}
-.paginate_common .next_tt {padding:0 15px 0 0; background:url(/images/common/btn-paging-next.png) 100% 50% no-repeat}
+.paginate_common .go.first {background-image:url(../img/btn-paging-first.png)}
+.paginate_common .go.prev {margin-right:12px; background-image:url(../img/btn-paging-prev.png)}
+.paginate_common .go.next {margin-left:12px;background-image:url(../img/btn-paging-next.png)}
+.paginate_common .go.end {background-image:url(../img/btn-paging-end.png)}
+.paginate_common .next_tt {padding:0 15px 0 0; background:url(../img/btn-paging-next.png) 100% 50% no-repeat}
 .wrap_paginate {position:relative; margin-top:20px; text-align:center}
 .wrap_paginate .paginate_common {display:inline-block; margin:0}
 .wrap_paginate .closed {position:absolute; left:0; top:0; line-height:20px}
@@ -223,7 +223,7 @@
 .box_process ul li {display:inline-block; position:relative; padding-left:100px; text-align:left}
 .box_process ul li:after {content:""; position:absolute; left:0; top:50%; width:80px; height:80px; margin-top:-40px; border-radius:100%; background-color:#bbb; background-position:50% 50%; background-repeat:no-repeat}
 .box_process ul li ~ li {margin-left:90px}
-.box_process ul li ~ li:before {content:""; position:absolute; left:-50px; top:50%; margin-top:-11px; width:11px; height:21px; background:url(/images/common/ico-process-gt.png)}
+.box_process ul li ~ li:before {content:""; position:absolute; left:-50px; top:50%; margin-top:-11px; width:11px; height:21px; background:url(../img/ico-process-gt.png)}
 .box_process ul li * {display:block}
 .box_process ul li strong {font-size:16px; color:#aaa}
 .box_process ul li span {margin-top:6px; font-size:16px; font-weight:300; color:#555}
@@ -374,8 +374,8 @@ table[class*="tbl_form"] tr th .req span {text-indent:-999em; position:absolute;
 .tbl_board_view tr td.content p {line-height:1.666em}
 .tbl_board_view tr td.subject {font-size:16px; color:#555}
 .tbl_board_view tr.prev_next th span {display:inline-block; padding-right:18px}
-.tbl_board_view tr.prev_next th .prev {background:url(/images/common/ico_paging_prev.png) 100% 50% no-repeat}
-.tbl_board_view tr.prev_next th .next {background:url(/images/common/ico_paging_next.png) 100% 50% no-repeat}
+.tbl_board_view tr.prev_next th .prev {background:url(../img/ico_paging_prev.png) 100% 50% no-repeat}
+.tbl_board_view tr.prev_next th .next {background:url(../img/ico_paging_next.png) 100% 50% no-repeat}
 /* table bottom */
 .note_data {margin-top:20px}
 .note_data:after {content:""; display:block; clear:both}
@@ -419,7 +419,7 @@ table[class*="tbl_form"] tr th .req span {text-indent:-999em; position:absolute;
 .prgrp_note:before {content:"* "; color:#d43301}
 /* text, copy box type */
 .box_caution {margin-top:55px; border:1px solid #ddd; padding:29px; padding-bottom:26px; background:#fff}
-.box_caution .tit {padding-left:35px; font-size:20px; font-weight:500; line-height:25px; background:url(/images/common/ico_caution_box.png) 0 50% no-repeat}
+.box_caution .tit {padding-left:35px; font-size:20px; font-weight:500; line-height:25px; background:url(../img/ico_caution_box.png) 0 50% no-repeat}
 .box_caution .list_text_common {margin-top:-3px}
 .box_caution .tit + .list_text_common {margin-top:15px}
 .box_visual_top {display:table; width:100%; margin-bottom:40px; border:1px solid #eee}
@@ -473,7 +473,7 @@ table[class*="tbl_form"] tr th .req span {text-indent:-999em; position:absolute;
 .popup_win_common .popup_win_header {padding:0 40px; background:#007bc3}
 .popup_win_common .popup_win_header:after {content:""; display:block; clear:both}
 .popup_win_common .popup_win_header h1 {float:left; height:60px; line-height:58px; font-size:20px; font-weight:500; color:#fff}
-.popup_win_common .popup_win_close {position:absolute; right:35px; top:15px; width:30px; height:30px; text-indent:-999em; background:url(/images/common/btn_close_popup.png) 50% 50% no-repeat}
+.popup_win_common .popup_win_close {position:absolute; right:35px; top:15px; width:30px; height:30px; text-indent:-999em; background:url(../img/btn_close_popup.png) 50% 50% no-repeat}
 .popup_win_common .popup_win_content {padding:40px}
 .popup_win_common .popup_win_content .btns_bottom {margin-top:20px; text-align:center}
 .popup_win_common .popup_win_content .btns_bottom .btn_common {vertical-align:top; margin:0 3px}
@@ -482,7 +482,7 @@ table[class*="tbl_form"] tr th .req span {text-indent:-999em; position:absolute;
 .wrap_pop_layer .popup_layer {display:inline-block; vertical-align:middle; width:500px; text-align:left; border:1px solid #007bc3; background:#fff; padding:30px}
 .wrap_pop_layer .header_layer {position:relative; height:36px}
 .wrap_pop_layer .header_layer .title {font-size:18px; font-weight:500; color:#007bc3}
-.wrap_pop_layer .header_layer .close {position:absolute; right:0; top:0; width:16px; height:16px; text-indent:-999em; overflow:hidden; background:url(/images/common/btn_close_layerpop.png)}
+.wrap_pop_layer .header_layer .close {position:absolute; right:0; top:0; width:16px; height:16px; text-indent:-999em; overflow:hidden; background:url(../img/btn_close_layerpop.png)}
 .wrap_pop_layer .btns_bottom {margin-top:20px; text-align:center}
 .wrap_pop_layer .btns_bottom .btn_common {margin:0 3px}
 
@@ -533,7 +533,7 @@ table tr td .ball_645.sml {margin:0 3px}
 .wrapper_movie .movie .status:after {content:""; display:inline-block; width:0; height:100%; vertical-align:middle}
 .wrapper_movie .movie .status p {display:inline-block; vertical-align:middle}
 .wrapper_movie .movie .status p span {display:block; font-size:14px; padding-top:10px}
-.wrapper_movie .install {padding-left:33px; margin-top:10px; height:24px; line-height:23px; background:url(/images/common/ico_install_flash.png) 0 50% no-repeat}
+.wrapper_movie .install {padding-left:33px; margin-top:10px; height:24px; line-height:23px; background:url(../img/ico_install_flash.png) 0 50% no-repeat}
 
 /*2019-09-25 */
 .btm_txt_wrap {padding-top:20px; color:#dc1f1f;}

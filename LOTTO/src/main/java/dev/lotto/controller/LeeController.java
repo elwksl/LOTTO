@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import dev.lotto.dto.ShopDtoImpl;
-import dev.lotto.dto.lottoDAO;
 import dev.lotto.service.ShopService;
 import dev.lotto.service.ShopServiceImpl;
 import dev.lotto.vo.ShopVO;
@@ -62,11 +61,11 @@ public class LeeController {
 	public ModelAndView agreement(Model model) {
 		ModelAndView result = new ModelAndView();
 
-		Map<String, Object> map;
-		List<ShopVO> shopList = ShopServiceImpl.shopinfo(pMap);
-		map.put(shopList, shopList);
-		logger.info(shopList.toString());
-		
+		/*
+		 * Map<String, Object> map; List<ShopVO> shopList =
+		 * ShopServiceImpl.shopinfo(pMap); map.put(shopList, shopList);
+		 * logger.info(shopList.toString());
+		 */
 		result.setViewName("lee/agreementDetail");
 
 		
