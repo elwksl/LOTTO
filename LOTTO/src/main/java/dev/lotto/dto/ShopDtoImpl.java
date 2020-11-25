@@ -28,7 +28,7 @@ public class ShopDtoImpl implements ShopDto{
 	
 	@Override
 	public List<ShopVO> shopsearchinfo(String adr) {
-		// TODO Auto-generated method stub
+	
 		return sqlSession.openSession().selectList("loto.mapper.parkMapper.shopsearchinfo", adr);
 	}
 	

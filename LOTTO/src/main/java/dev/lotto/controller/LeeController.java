@@ -41,7 +41,7 @@ public class LeeController {
 	@RequestMapping(value = "/login")
 	public ModelAndView login(@Param(value = "common/login") Map<String, Object> pMap) {
 		ModelAndView mv = new ModelAndView();
-
+				mv.setViewName( "common/login");
 		return mv;
 	}
 
