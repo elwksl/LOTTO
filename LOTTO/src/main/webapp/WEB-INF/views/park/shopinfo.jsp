@@ -27,6 +27,8 @@ $(document).ready(function(){
  	
 	 addressSearch2();
 	 addressSearch('서울');
+	 $("#adre2").val("강남구").attr("selected","selected");
+	 searchBtn1('강남구');
 });
 
 
@@ -87,9 +89,13 @@ function searchAddresspark1(){
         async:false,
         contentType: "application/x-www-form-urlencoded; charset=utf8",   
         success: function(data){   
+        	if(data.length==0){
+        		SearchForm +='<tr><td colspan="3">해당 주소의 판매점이 없습니다.</td></tr>';
+        	} else{
 	        	 for(var i=0; i<data.length; i++){
 	        		 SearchForm +='<tr><td>'+data[i].shop_NAME+'</td><td>'+data[i].phone+'</td><td>'+data[i].address+'</td></tr>';
 	        	 }  
+        	}
         	 $("#tbodySearchForm").empty();
         	 $("#tbodySearchForm").html(SearchForm);  
         },
@@ -112,10 +118,14 @@ function searchBtn2(searchadr){
         dataType : "json",
         async:false,
         contentType: "application/x-www-form-urlencoded; charset=utf8",   
-        success: function(data){   
+        success: function(data){  
+        	if(data.length==0){
+        		SearchForm +='<tr><td colspan="3">해당 주소의 판매점이 없습니다.</td></tr>';
+        	} else{
 	        	 for(var i=0; i<data.length; i++){
 	        		 SearchForm +='<tr><td>'+data[i].shop_NAME+'</td><td>'+data[i].phone+'</td><td>'+data[i].address+'</td></tr>';
-	        	 }  
+	        } 
+        }
         	 $("#tbodySearchForm").empty();
         	 $("#tbodySearchForm").html(SearchForm);  
         },
@@ -181,9 +191,13 @@ function searchBtn1(ff){
         async:false,
         contentType: "application/x-www-form-urlencoded; charset=utf8",   
         success: function(data){   
+        	if(data.length==0){
+        		SearchForm +='<tr><td colspan="3">해당 주소의 판매점이 없습니다.</td></tr>';
+        	} else{
 	        	 for(var i=0; i<data.length; i++){
 	        		 SearchForm +='<tr><td>'+data[i].shop_NAME+'</td><td>'+data[i].phone+'</td><td>'+data[i].address+'</td></tr>';
-	        	 }  
+	        	 } 
+        	}
         	 $("#tbodySearchForm").empty();
         	 $("#tbodySearchForm").html(SearchForm);  
         },

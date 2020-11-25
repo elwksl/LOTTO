@@ -14,4 +14,6 @@ public interface ShopDto {
 	
 	public List<ShopVO> shopsearchinfo(String adr);
 	
+	public List<ShopPrizeVO> Dangsearchinfo(String adr);
+	
 }

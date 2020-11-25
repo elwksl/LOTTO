@@ -7,6 +7,14 @@
  
 
 <mapper namespace="loto.mapper.parkMapper">
+
+<resultMap type="dev.lotto.vo.ShopPrizeVO" id="Person">
+	<result column="DROW_STA_DATE" property="DROW_STA_DATE"/>
+	<result column="DROW_END_DATE" property="DROW_END_DATE"/>
+	<result column="DROW_CNT" property="DROW_CNT"/>
+</resultMap>
+
+
  <select id="shopinfo" resultType="dev.lotto.vo.ShopVO">
   SELECT *
   FROM TB_LOTTO_SHOP
@@ -17,10 +25,19 @@
   FROM TB_DANGCHUM_HISTORY
  </select>
  
-  <select id="shopsearchinfo" parameterType="String" resultType="dev.lotto.vo.ShopVO">
+ <select id="shopsearchinfo" parameterType="String" resultType="dev.lotto.vo.ShopVO">
   SELECT *
   FROM TB_LOTTO_SHOP
   WHERE address LIKE '%' || #{adr} ||'%'
+ </select>
+ 
+ <select id="Dangsearchinfo" parameterType="String" resultType="dev.lotto.vo.ShopPrizeVO">
+	  SELECT C.SHOP_NAME as DROW_STA_DATE,C.ADDRESS as DROW_END_DATE,A.DANGCHUM_NUM as DROW_CNT
+	  FROM TB_LOTTO_HISTORY A LEFT JOIN TB_LOTTO_PAY B ON  A.LOTTO_NO = B.LOTTO_NO
+	  LEFT JOIN TB_LOTTO_SHOP C ON B.SHOP_ID = C.SHOP_ID
+	  WHERE A.DROW_CNT = #{adr}
+	  AND A.DANGCHUM_NUM in ('1','2')
+  
  </select>
  
 </mapper> 

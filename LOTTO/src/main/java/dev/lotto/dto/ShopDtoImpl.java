@@ -32,5 +32,10 @@ public class ShopDtoImpl implements ShopDto{
 		return sqlSession.openSession().selectList("loto.mapper.parkMapper.shopsearchinfo", adr);
 	}
 	
+	@Override
+	public List<ShopPrizeVO> Dangsearchinfo(String adr) {
+		return sqlSession.openSession().selectList("loto.mapper.parkMapper.Dangsearchinfo", adr);
+	}
+	
 	
 }
